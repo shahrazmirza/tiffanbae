@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/cabin": "^5.0.16",
+    "@fontsource/herr-von-muellerhoff": "^5.0.18",
+    "@fontsource/source-sans-3": "^5.0.18",
     "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.3.4",
     "@nextui-org/react": "^2.2.9",
