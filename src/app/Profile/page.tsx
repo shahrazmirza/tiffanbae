@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import Navbar from "../Components/Navbar";
 import Scroll_to_top from "../Components/Scroll_to_top";
 import Whatsapp from "../Components/Whatsapp";
-import { authOptions } from "../../utils/authOptions";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 
 const ProfilePage = async () => {
