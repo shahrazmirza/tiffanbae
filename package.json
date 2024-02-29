@@ -24,6 +24,7 @@
     "@types/jsonwebtoken": "^9.0.5",
     "@types/nodemailer": "^6.4.14",
     "@types/validator": "^13.11.8",
+    "@vercel/postgres": "^0.7.2",
     "animate.css": "^4.1.1",
     "aws-sdk": "^2.1565.0",
     "bcrypt": "^5.1.1",
