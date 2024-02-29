@@ -1,55 +1,29 @@
 'use client'
-import Link from 'next/link';
-import React, { useState, useEffect, useContext } from 'react';
-import { Container } from '@radix-ui/themes';
-import SigninButton from '../Components/SigninButton';
+import React, { useEffect, useState } from 'react'
+import Navmenu from './NavMenu'
+import Togglemenu from './Togglemenu';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
-
   return (
-    <Container
-      className={`fixed top-0 left-0 right-0 z-10 w-screen transition-transform transform ${
-        isScrolled ? '-translate-y-full' : 'translate-y-0'
-      }`}
-    >
-      <div className='text-white flex justify-between items-center h-14 pt-2'>
-        <Link href='/' className='font-heading2 text-5xl font-bold tracking-wider'>
-          TIFFAN BAE
-        </Link>
+    <div>
+      {isMobile ? <Togglemenu /> : <Navmenu />}
+    </div>
+  )
+}
 
-        <div className='flex text-base'>
-          <Link href='/' className='px-6 text-white hover:text-sky-600 transition-colors pt-1'>
-            HOME
-          </Link>
-
-          <Link href='/Menu' className='px-6 text-white hover:text-sky-600 transition-colors pt-1'>
-            MENU
-          </Link>
-
-          <Link href='/Contact' className='px-6 text-white hover:text-sky-600 transition-colors pt-1'>
-            CONTACT
-          </Link>
-
-          <SigninButton />
-
-        </div>
-      </div>
-    </Container>
-  );
-};
-
-export default Navbar;
+export default Navbar
