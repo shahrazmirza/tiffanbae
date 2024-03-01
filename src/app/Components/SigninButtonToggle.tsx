@@ -10,28 +10,28 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownSection, DropdownItem, User} from "@nextui-org/react";
 import { MyButton } from "./MyButton";
 
-const SigninButton = () => {
+const SigninButtonToggle = () => {
   const { data: session } = useSession();
 
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="flex items-center z-20">
+    <div className="flex z-20">
       {session && session.user ? (
         <>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center -mr-3">
             <Link href='/Cart'>
               <p 
-                className="px-6 text-orange-400 font-medium text-sm z-20 ml-1 mb-4">{cart?.cartItems?.length || 0}
+                className="px-2 text-orange-400 text-xs z-20 ml-1 mb-4">{cart?.cartItems?.length || 0}
               </p>
             </Link>
             
-            <Link href='/Cart' className='px-6 text-2xl absolute text-white'>
+            <Link href='/Cart' className='text-xl absolute text-white'>
               <Image
                 src='/assets/Cart.png'
                 alt=''
-                width='35'
-                height='30'
+                width='20'
+                height='20'
               />
             </Link>
           </div>
@@ -45,14 +45,14 @@ const SigninButton = () => {
       }}
     >
       <DropdownTrigger>
-        <MyButton disableRipple>G'Day<p className="font-medium text-base text-orange-400">{`${session.user.firstName}`}!</p>
+        <MyButton disableRipple className="text-xs">G'Day<p className="font-medium text-sm -mr-2 text-orange-400">{`${session.user.firstName}`}!</p>
         <CaretDownIcon />
         </MyButton>
       </DropdownTrigger>
       <DropdownMenu
         aria-label="Custom item styles"
         disabledKeys={["profile"]}
-        className="p-3"
+        className="p-0"
         itemClasses={{
           base: [
             "rounded-md",
@@ -71,7 +71,7 @@ const SigninButton = () => {
           <DropdownItem
             isReadOnly
             key="profile"
-            className="h-14 gap-2 opacity-100"
+            className="h-14 opacity-100"
           >
             <User
               name={`${session.user.firstName} ${session.user.lastName}`}
@@ -104,7 +104,7 @@ const SigninButton = () => {
         </>
       ) : (
         <>
-          <button onClick={() => signIn()} className='px-6 text-2xl'>
+          <button onClick={() => signIn()} className='px-6 text-2xl text-white h-10'>
             <FaUserCircle />
           </button>
           
@@ -114,4 +114,4 @@ const SigninButton = () => {
   );
 };
 
-export default SigninButton;
+export default SigninButtonToggle;
