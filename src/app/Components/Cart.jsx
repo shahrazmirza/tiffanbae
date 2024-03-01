@@ -7,6 +7,7 @@ import { BsTrash3 } from 'react-icons/bs';
 import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
+import PaymentForm from '../Components/PaymentForm';
 
 const Cart = () => {
   const { addItemToCart, deleteItemFromCart, cart } = useContext(CartContext);
@@ -248,10 +249,10 @@ const handleSuburbChange = (option) => {
                     Back to shop
                   </Link>
 
-                  {/* <div>
+                  <div>
                     <h1>My Product</h1>
                     <PaymentForm />
-                  </div> */}
+                  </div>
 
                 </article>
               </aside>
