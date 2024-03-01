@@ -67,7 +67,7 @@ const ResetPasswordForm = ({ jwtUserId }: Props) => {
           label="Password"
           {...register("password")}
           errorMessage={errors.password?.message}
-          className="w-96 h-12 rounded border-neutral-400 my-5"
+          className="w-80 md:w-96 h-12 rounded border-neutral-400 my-5"
           endContent={
             <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
               {visiblePass ? (
@@ -84,14 +84,14 @@ const ResetPasswordForm = ({ jwtUserId }: Props) => {
           label="Confirm Password"
           {...register("confirmPassword")}
           errorMessage={errors.confirmPassword?.message}
-          className="w-96 h-12 rounded border-neutral-400 my-5"
+          className="w-80 md:w-96 h-12 rounded border-neutral-400 my-5"
         />
         <div className="flex justify-center">
           <Button
             isLoading={isSubmitting}
             type="submit"
             disabled={isSubmitting}
-            className="flex items-center justify-center px-10 w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
+            className="flex items-center justify-center px-10 w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
           >
             {isSubmitting ? "Please Wait..." : "Submit"}
           </Button>
