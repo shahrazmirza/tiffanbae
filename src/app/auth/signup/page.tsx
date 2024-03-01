@@ -12,7 +12,7 @@ const SignupPage = () => {
       <Whatsapp />
       <Container>
         <div className='flex flex-col justify-center items-center h-screen'>
-          <div className='flex place-self-end pt-16'>
+          <div className='flex justify-center md:place-self-end pt-16 pb-5'>
             <p className='text-white'>Already a member? </p>
             <Link href='/auth/signin' className='ml-1 underline text-blue-600'>Sign in</Link>
           </div>

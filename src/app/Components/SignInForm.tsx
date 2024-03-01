@@ -67,14 +67,14 @@ const SignInForm = (props: Props) => {
         label="Email" 
         {...register("email")} 
         errorMessage={errors.email?.message}
-        className="w-96 h-12 rounded border-neutral-400 my-5" 
+        className="w-80 md:w-96 rounded border-neutral-400 my-5" 
       />
       <Input
         label="Password"
         {...register("password")}
         type={visiblePass ? "text" : "password"}
         errorMessage={errors.password?.message}
-        className='w-96 h-12 rounded border-neutral-400 text-black'
+        className='w-80 md:w-96 rounded border-neutral-400 text-black'
         endContent={
           <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
             {visiblePass ? <EyeSlashIcon className="w-4" /> : <EyeIcon className="w-4" />}
@@ -86,7 +86,7 @@ const SignInForm = (props: Props) => {
             type="submit" 
             disabled={isSubmitting} 
             isLoading={isSubmitting}
-            className='flex items-center justify-center px-10 my-5 w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700'
+            className='flex items-center justify-center px-10 my-5 w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700'
           >
             {isSubmitting ? "Signing In..." : "Sign In"}
           </Button>
@@ -117,7 +117,7 @@ export default SignInForm;
 //             label="Email"
 //             // {...register("email")}
 //             // errorMessage={errors.email?.message}
-//             className="w-96 h-12 rounded border-neutral-400 my-5"
+//             className="w-80 md:w-96 rounded border-neutral-400 my-5"
 //           />
 
 //           <Input
@@ -125,7 +125,7 @@ export default SignInForm;
 //             {...register("password")}
 //             type={visiblePass ? "text" : "password"}
 //             errorMessage={errors.password?.message}
-//             className='w-96 h-12 rounded border-neutral-400 text-black'
+//             className='w-80 md:w-96 rounded border-neutral-400 text-black'
 //             endContent={
 //               <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
 //                 {visiblePass ? <EyeSlashIcon className="w-4" /> : <EyeIcon className="w-4" />}

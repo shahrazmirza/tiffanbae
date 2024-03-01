@@ -73,22 +73,22 @@ const SignUpForm = () => {
   return (
     <form
       onSubmit={handleSubmit(saveUser)}
-      className="flex flex-col gap-6 w-96"
+      className="flex flex-col gap-6 w-80 md:w-96"
     >
-      <div className="flex gap-6 w-96">
+      <div className="flex gap-6 w-80 md:w-96">
         <Input
           errorMessage={errors.firstName?.message}
           isInvalid={!!errors.firstName}
           {...register("firstName")}
           label="First Name"
-          className="w-96 h-12 rounded border-neutral-400"
+          className="w-80 md:w-96 h-12 rounded border-neutral-400"
         />
         <Input
           errorMessage={errors.lastName?.message}
           isInvalid={!!errors.lastName}
           {...register("lastName")}
           label="Last Name"
-          className="w-96 h-12 rounded border-neutral-400"
+          className="w-80 md:w-96 h-12 rounded border-neutral-400"
         />
       </div>
       <Input
@@ -96,14 +96,14 @@ const SignUpForm = () => {
         isInvalid={!!errors.email}
         {...register("email")}
         label="Email"
-        className="w-96 h-12 rounded border-neutral-400"
+        className="w-80 md:w-96 h-12 rounded border-neutral-400"
       />{" "}
       <Input
         errorMessage={errors.phone?.message}
         isInvalid={!!errors.phone}
         {...register("phone")}
         label="Phone"
-        className="w-96 h-12 rounded border-neutral-400"
+        className="w-80 md:w-96 h-12 rounded border-neutral-400"
       />{" "}
       <Input
         errorMessage={errors.password?.message}
@@ -111,7 +111,7 @@ const SignUpForm = () => {
         {...register("password")}
         label="Password"
         type={isVisiblePass ? "text" : "password"}
-        className="w-96 h-12 rounded border-neutral-400"
+        className="w-80 md:w-96 h-12 rounded border-neutral-400"
         endContent={
           isVisiblePass ? (
             <EyeSlashIcon
@@ -132,10 +132,10 @@ const SignUpForm = () => {
         {...register("confirmPassword")}
         label="Confirm Password"
         type={isVisiblePass ? "text" : "password"}
-        className="w-96 h-12 rounded border-neutral-400"
+        className="w-80 md:w-96 h-12 rounded border-neutral-400"
       />
       <div className="flex justify-center">
-        <Button className="flex items-center justify-center px-10  w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700" type="submit">
+        <Button className="flex items-center justify-center px-10  w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700" type="submit">
         Submit
         </Button>
       </div>

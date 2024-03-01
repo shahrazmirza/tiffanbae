@@ -50,13 +50,13 @@ const ForgotPasswordPage = () => {
             {...register("email")}
             // startContent={<EnvelopeIcon className="w-4" />}
             errorMessage={errors.email?.message}
-            className="w-96 h-12 rounded border-neutral-400 my-5"
+            className="w-80 md:w-96 h-12 rounded border-neutral-400 my-5"
           />
           <Button
             isLoading={isSubmitting}
             type="submit"
             disabled={isSubmitting}
-            className="flex items-center justify-center px-10 my-5 w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
+            className="flex items-center justify-center px-10 my-5 w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
           >
             {isSubmitting ? "Please Wait..." : "Submit"}
           </Button>
