@@ -35,23 +35,23 @@ const Products = ({ }) => {
   return (
     <Container>
       <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>
           MUTTON CORNER
         </p>
-        <ul className='grid grid-cols-2 gap-14 pt-10 '>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10 '>
         {items.filter(item => item.category === 'Mutton').map((item) => (
             <li>
               <div className='border p-5'>
                 <div className='flex justify-between'>
-                  <p className='font-medium text-lg font-heading2 uppercase text-neutral-600'>
+                  <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                     {item.name}
                   </p>
-                  <p className='font-bold text-xl font-heading2 uppercase text-neutral-600'>
+                  <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
                   ${item.price.toFixed(2)}
                   </p>
                 </div>
                 <div className='flex justify-between'>
-                  <p className='text-base font-normal text-neutral-600 pt-5'>
+                  <p className='text-sm md:text-base font-normal text-neutral-600 pt-5'>
                     {item.description}
                   </p>
                   <div></div>
@@ -71,58 +71,70 @@ const Products = ({ }) => {
         </ul>
       </div>
       <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>CHICKEN CORNER</p>
-        <ul className='grid grid-cols-2 gap-14 pt-10'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>CHICKEN CORNER</p>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10'>
         {items.filter(item => item.category === 'Chicken').map((item) => (
             <li>
-              <div className='border p-5'>
-                <div className='flex justify-between'>
-                  <p className='font-medium text-lg font-heading2 uppercase text-neutral-600'>{item.name}</p>
-                  <p className='font-bold text-xl font-heading2 uppercase text-neutral-600'>${item.price.toFixed(2)}</p>
-                </div>
-                <div className='flex justify-between'>
-                  <p className='text-base font-normal text-neutral-600 pt-5'>{item.description}</p>
-                  <div></div>
-                </div>
-                <div className='flex justify-between'>
-                  <div></div>
-                  <Button
-                    onClick={() => handleAddToCart(item)} 
-                    className='flex items-center justify-center p-3 mt-5 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
-                    <HiOutlineShoppingCart />
-                    Add to Cart
-                  </Button>
-                </div>
+            <div className='border p-5'>
+              <div className='flex justify-between'>
+                <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
+                  {item.name}
+                </p>
+                <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                ${item.price.toFixed(2)}
+                </p>
               </div>
-            </li>
+              <div className='flex justify-between'>
+                <p className='text-sm md:text-base font-normal text-neutral-600 pt-5'>
+                  {item.description}
+                </p>
+                <div></div>
+              </div>
+              <div className='flex justify-between'>
+                <div></div>
+                <Button
+                  onClick={() => handleAddToCart(item)} 
+                  className='flex items-center justify-center p-3 mt-5 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                  <HiOutlineShoppingCart />
+                  Add to Cart
+                </Button>
+              </div>
+            </div>
+          </li>
           ))}
         </ul>
       </div>
       <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>RICE CORNER</p>
-        <ul className='grid grid-cols-2 gap-14 pt-10'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>RICE CORNER</p>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10'>
         {items.filter(item => item.category === 'Rice').map((item) => (
             <li>
-              <div className='border p-5'>
-                <div className='flex justify-between'>
-                  <p className='font-medium text-lg font-heading2 uppercase text-neutral-600'>{item.name}</p>
-                  <p className='font-bold text-xl font-heading2 uppercase text-neutral-600'>${item.price.toFixed(2)}</p>
-                </div>
-                {/* <div className='flex justify-between'>
-                  <p className='text-base font-normal text-neutral-600 pt-5'>{item.description}</p>
-                  <p className='font-bold text-xl font-heading2 uppercase text-white'>{item.price}</p>
-                </div> */}
-                <div className='flex justify-between'>
-                  <div></div>
-                  <Button
-                    onClick={() => handleAddToCart(item)} 
-                    className='flex items-center justify-center p-3 mt-5 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
-                    <HiOutlineShoppingCart />
-                    Add to Cart
-                  </Button>
-                </div>
+            <div className='border p-5'>
+              <div className='flex justify-between'>
+                <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
+                  {item.name}
+                </p>
+                <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                ${item.price.toFixed(2)}
+                </p>
               </div>
-            </li>
+              {/* <div className='flex justify-between'>
+                <p className='text-sm md:text-base font-normal text-neutral-600 pt-5'>
+                  {item.description}
+                </p>
+                <div></div>
+              </div> */}
+              <div className='flex justify-between'>
+                <div></div>
+                <Button
+                  onClick={() => handleAddToCart(item)} 
+                  className='flex items-center justify-center p-3 mt-5 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                  <HiOutlineShoppingCart />
+                  Add to Cart
+                </Button>
+              </div>
+            </div>
+          </li>
           ))}
         </ul>
       </div>
