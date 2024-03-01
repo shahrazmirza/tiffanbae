@@ -16,7 +16,7 @@ const SigninButtonToggle = () => {
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="flex z-20">
+    <div className="flex">
       {session && session.user ? (
         <>
           <div className="flex flex-col justify-center items-center -mr-3">
