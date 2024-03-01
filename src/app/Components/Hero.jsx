@@ -33,37 +33,27 @@ const Hero = () => {
           />
         </div>
 
-        <div className='grid grid-rows-1 items-center'>
-          <div className='grid items-center h-screen'>
-            <div className='flex justify-between items-center'>
-              <Link href='/' className='text-white text-8xl font-light opacity-80' onClick={handlePrevImage}>
-                <div className='bg-black opacity-50 w-16 flex text-center items-center'>
-                  <BsChevronLeft />
-                </div>
-              </Link>
-
-              <div className='text-center z-10'>
-                <p 
-                className='font-heading1 text-8xl tracking-wider text-orange-400 animate__animated animate__fadeInUp'>Tiffan Bae</p>
-                
-                <p 
-                className='font-heading2 text-5xl font-bold tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'
-                >SIZZLING & SCRUMPTIOUS</p>
-              </div>
-
-              <Link href='/' className='text-white text-8xl font-light opacity-80' onClick={handleNextImage}>
-                <div className='bg-black opacity-50 w-16 flex text-center items-center'>
-                  <BsChevronRight />
-                </div>
-              </Link>
+        <div className='flex justify-between items-center h-screen w-screen'>
+          <Link href='/' className='text-white text-6xl md:text-8xl font-light opacity-80' onClick={handlePrevImage}>
+            <div className='bg-black opacity-50 w-5 md:w-16 flex text-center items-center'>
+              <BsChevronLeft />
             </div>
+          </Link>
 
-            {/* <div className='flex justify-center'>
-              <Link href='/' className='text-white text-4xl font-light opacity-30'>
-                <BsChevronDown />
-              </Link>
-            </div> */}
+          <div className='text-center z-10'>
+            <p 
+            className='font-heading1 text-7xl md:text-8xl md: pb-5 tracking-wider text-orange-400 animate__animated animate__fadeInUp'>Tiffan Bae</p>
+            
+            <p 
+            className='font-heading2 text-3xl md:text-5xl text-wrap font-bold tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'
+            >SIZZLING & SCRUMPTIOUS</p>
           </div>
+
+          <Link href='/' className='text-white text-6xl md:text-8xl font-light opacity-80' onClick={handleNextImage}>
+            <div className='bg-black opacity-50 w-5 md:w-16 flex text-center items-center'>
+              <BsChevronRight />
+            </div>
+          </Link>
         </div>
       </div>
   );

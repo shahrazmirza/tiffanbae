@@ -6,7 +6,7 @@ import { sendMail } from '../lib/mail'
 
 export default async function Home() {
   return (
-    <div className='w-screen h-screen'>
+    <div className='mw-screen mh-screen overflow-hidden'>
       <Navbar />
       <Whatsapp />
       <Hero />
