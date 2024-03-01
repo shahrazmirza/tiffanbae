@@ -29,7 +29,7 @@ function Togglemenu() {
   };
 
   return (
-    <div className='fixed z-20 w-screen'>
+    <div className='z-20 w-screen'>
       <div className='flex justify-between items-center px-5 py-3 h-16'>
         <div>
           <Link href='/' className='font-heading2 text-2xl font-bold tracking-wider text-white'>
