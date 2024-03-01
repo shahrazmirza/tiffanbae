@@ -28,8 +28,26 @@ function Togglemenu() {
     setShowDiv(!showDiv);
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='w-screen'>
+    <div className={`fixed top-0 left-0 right-0 w-screen z-10 transition-transform transform ${
+      isScrolled ? '-translate-y-full' : 'translate-y-0'
+    }`}
+    >
       <div className='flex justify-between items-center px-5 py-3 h-16'>
         <div>
           <Link href='/' className='font-heading2 text-2xl font-bold tracking-wider text-white'>
