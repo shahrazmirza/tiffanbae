@@ -22,7 +22,7 @@ const NavMenu = () => {
 
   return (
     <Container
-      className={`top-0 left-0 right-0 z-10 w-screen transition-transform transform ${
+      className={`top-0 left-0 right-0 z-20 w-screen transition-transform transform ${
         isScrolled ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
