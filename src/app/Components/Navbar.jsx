@@ -1,4 +1,4 @@
-'use client'
+.'use client'
 import React, { useEffect, useState } from 'react'
 import Navmenu from './NavMenu'
 import Togglemenu from './Togglemenu';
@@ -20,7 +20,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className='z-30'>
+    <div>
       {isMobile ? <Togglemenu /> : <Navmenu />}
     </div>
   )
