@@ -28,7 +28,7 @@ const SigninButton = () => {
             
             <Link href='/Cart' className='px-6 text-2xl absolute text-white'>
               <Image
-                src='/assets/cart.png'
+                src='/assets/Cart.png'
                 alt=''
                 width='35'
                 height='30'
