@@ -20,7 +20,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div>
+    <div className='z-20'>
       {isMobile ? <Togglemenu /> : <Navmenu />}
     </div>
   )
