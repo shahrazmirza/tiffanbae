@@ -10,7 +10,7 @@ interface Props {
 const ActivationPage = async ({ params }: Props) => {
   const result = await activateUser(params.jwt);
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center p-5">
       {result === "userNotExist" ? (
         <p className="text-red-500 text-2xl">Your account does not exist</p>
       ) : result === "alreadyActivated" ? (
