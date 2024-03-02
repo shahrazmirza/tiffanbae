@@ -12,13 +12,22 @@ const ActivationPage = async ({ params }: Props) => {
   return (
     <div className="h-screen flex flex-col items-center justify-center text-center p-5 bg-black">
       {result === "userNotExist" ? (
-        <p className="text-red-500 text-xl md: text-2xl">Your account does not exist</p>
+        <div>
+          <p className="text-red-500 text-xl md: text-2xl">Your account does not exist</p>
+          <Link href='/auth/signup' className='ml-1 underline text-blue-600'>Sign up to create an account at Tiffan Bae</Link>
+        </div>
       ) : result === "alreadyActivated" ? (
-        <p className="text-red-500 text-xl md: text-2xl">Your account is already activated</p>
+        <div>
+          <p className="text-red-500 text-xl md: text-2xl">Your account is already activated</p>
+          <Link href='/auth/signin' className='ml-1 underline text-blue-600'>Sign in to Tiffan Bae</Link>
+        </div>
       ) : result === "success" ? (
-        <p className="text-green-500 text-xl md: text-2xl">
-          Congratulations! Your account is now activated
-        </p>
+        <div>
+          <p className="text-green-500 text-xl md: text-2xl">
+            Congratulations! Your account is now activated
+          </p>
+          <Link href='/auth/signin' className='ml-1 underline text-blue-600'>Sign in to Tiffan Bae</Link>
+        </div>
       ) : (
         <p className="text-yellow-500 text-xl md: text-2xl">Oops! Something went wrong!</p>
       )}
