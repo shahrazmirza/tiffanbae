@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Image from 'next/image'
 import { Container } from '@radix-ui/themes'
-import Contact_Form from '../Components/Contact_Form'
+import ContactForm from '../Components/ContactForm'
 import Whatsapp from '../Components/Whatsapp'
 
 const Contact = () => {
@@ -28,7 +28,7 @@ const Contact = () => {
         <div className='py-5'>
           <div className='pt-5 pb-5'>
             <Container>
-              <Contact_Form />
+              <ContactForm />
             </Container>
           </div>
         </div>
