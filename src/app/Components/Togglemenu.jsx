@@ -44,7 +44,7 @@ function Togglemenu() {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 w-screen z-10 transition-transform transform ${
+    <div className={`fixed top-0 left-0 right-0 w-screen z-20 transition-transform transform ${
       isScrolled ? '-translate-y-full' : 'translate-y-0'
     }`}
     >
