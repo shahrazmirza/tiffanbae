@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from 'react';
 import $ from 'jquery'; // Import jQuery
 import { Input, Select, SelectItem } from '@nextui-org/react';
