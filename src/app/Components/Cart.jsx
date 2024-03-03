@@ -195,7 +195,7 @@ const handleSuburbChange = (option) => {
                       labelPlacement="outside"
                       placeholder="Enter your description"
                       defaultValue="56 Valencia Blvd Doreen VIC 3754"
-                      className="max-w-xs py-5 pb-10"
+                      className="max-w-xs py-5"
                     />
                   )}
 
@@ -210,7 +210,7 @@ const handleSuburbChange = (option) => {
                         options={allowedSuburbs.map((suburb) => ({ value: suburb.id, label: suburb.name }))}
                         onChange={handleSuburbChange}
                         isClearable
-                        className='py-5'
+                        className='py-5 z-20'
                       />
 
                       {selectedSuburb && (
@@ -227,33 +227,16 @@ const handleSuburbChange = (option) => {
                   Proceed to Payment
                   </Link> */}
 
-                  <div>
-                    <script type="text/javascript"
-                      src="https://www.simplify.com/commerce/simplify.pay.js">
-                    </script>
-                    <button data-sc-key="lvpb_YjU0N2NkNmYtOTExMy00NTdhLWIwYmEtN2ViZWI2NzdkZWI4"
-                      data-name="Jasmine Green Tea"
-                      data-description="Smooth tea with a rich jasmine bouquet"
-                      data-reference="99999"
-                      data-amount="3000"
-                      data-color="#12B830"
-                      className='px-4 py-3 mb-2 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
-                      Buy Now
-                    </button>
+                  <div className='py-3'>
+                    <PaymentForm />
                   </div>
-          
+
                   <Link
                     href="/Menu"
                     className="px-4 py-3 inline-block text-lg w-full text-center font-medium text-orange-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100"
                   >
                     Back to shop
                   </Link>
-
-                  <div>
-                    <h1>My Product</h1>
-                    <PaymentForm />
-                  </div>
-
                 </article>
               </aside>
             </div>

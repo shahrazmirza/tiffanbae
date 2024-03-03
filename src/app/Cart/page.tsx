@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Whatsapp from '../Components/Whatsapp';
 import Cart from '../Components/Cart';
+import Scroll_to_top from '../Components/Scroll_to_top';
 
 const CartPage = () => {
   return (
     <div className='mh-screen'>
       <Navbar />
       <Whatsapp />
+      <Scroll_to_top />
       <div className='flex justify-center items-center h-96'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image

@@ -41,7 +41,7 @@ const Scroll_to_top = () => {
 
   return (
     <button variants={jump}
-      className={`fixed md:w-14 md:h-14 w-12 h-12 text-center flex items-center justify-center right-7 md:bottom-24 bottom-20 bg-neutral-600 text-white p-0 rounded-full transition-opacity ${
+      className={`fixed md:w-14 md:h-14 w-12 h-12 text-center flex items-center justify-center right-7 md:bottom-24 bottom-20 bg-neutral-600 text-white p-0 rounded-full transition-opacity z-10 ${
         isVisible ? 'opacity-80' : 'opacity-0'
       }`}
         onClick={scrollToTop}
