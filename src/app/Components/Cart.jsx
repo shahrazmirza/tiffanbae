@@ -8,6 +8,7 @@ import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
 import PaymentForm from '../Components/PaymentForm';
+import data from '../Data/Products.json';
 
 const Cart = () => {
   const { addItemToCart, deleteItemFromCart, cart } = useContext(CartContext);
@@ -227,9 +228,25 @@ const handleSuburbChange = (option) => {
                   Proceed to Payment
                   </Link> */}
 
-                  <div className='py-3'>
+                  <button onClick={(() => [
+                    checkout({
+                      lineItems: [
+                        {
+                          price: totalAmount
+                        }
+                      ]
+                    })
+                  ])}
+                    type="submit"
+                    id="process-payment-btn"
+                    className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
+                  >
+                    Confirm & pay
+                  </button>
+        
+                  {/* <div className='py-3'>
                     <PaymentForm />
-                  </div>
+                  </div> */}
 
                   <Link
                     href="/Menu"
