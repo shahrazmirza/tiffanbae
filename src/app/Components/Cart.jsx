@@ -8,7 +8,7 @@ import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
 import PaymentForm from '../Components/PaymentForm';
-import data from '../Data/Products.json';
+// import data from '../Data/Products.json';
 
 const Cart = () => {
   const { addItemToCart, deleteItemFromCart, cart } = useContext(CartContext);
