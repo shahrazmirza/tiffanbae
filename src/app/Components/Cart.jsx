@@ -61,6 +61,10 @@ const Cart = () => {
     setSelectedSuburb(option);
   };
 
+  const handleDeliveryAddressChange = (event) => {
+    setDeliveryAddress(event.target.value);
+  };
+  
   const checkoutHandler = async () => {
     if (!selectedMethod) {
       return toast.error("Please select a method");
@@ -76,9 +80,10 @@ const Cart = () => {
     ) {
       return toast.error("Please enter your delivery address");
     } else {
-    
+      // Continue with the checkout process
+      // Your logic here...
     }
-  }
+  };
 
   return (
     <div>
