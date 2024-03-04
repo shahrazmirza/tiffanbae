@@ -8,7 +8,7 @@ import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
 import PaymentForm from '../Components/PaymentForm';
-// import data from '../Data/Products.json';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const { addItemToCart, deleteItemFromCart, cart } = useContext(CartContext);
@@ -42,6 +42,9 @@ const Cart = () => {
 
   const [allowedSuburbs, setAllowedSuburbs] = useState([]);
 
+  const [deliveryAddress, setDeliveryAddress] = useState("");
+
+
   useEffect(() => {
     console.log('', data);
 
@@ -52,11 +55,30 @@ const Cart = () => {
     }
   }, []);
 
-const [selectedSuburb, setSelectedSuburb] = useState(null);
+  const [selectedSuburb, setSelectedSuburb] = useState(null);
 
-const handleSuburbChange = (option) => {
-  setSelectedSuburb(option);
-};
+  const handleSuburbChange = (option) => {
+    setSelectedSuburb(option);
+  };
+
+  const checkoutHandler = async () => {
+    if (!selectedMethod) {
+      return toast.error("Please select a method");
+    } else if (
+      (selectedMethod.toLowerCase() === "delivery") &&
+      !selectedSuburb
+    ) {
+      return toast.error("Please choose your delivery suburb");
+    } else if (
+      (selectedMethod.toLowerCase() === "delivery") &&
+      selectedSuburb &&
+      !deliveryAddress
+    ) {
+      return toast.error("Please enter your delivery address");
+    } else {
+    
+    }
+  }
 
   return (
     <div>
@@ -207,7 +229,6 @@ const handleSuburbChange = (option) => {
                       </label>
                       <Select
                         id="deliverySuburb"
-                        name="deliverySuburb"
                         options={allowedSuburbs.map((suburb) => ({ value: suburb.id, label: suburb.name }))}
                         onChange={handleSuburbChange}
                         isClearable
@@ -216,6 +237,7 @@ const handleSuburbChange = (option) => {
 
                       {selectedSuburb && (
                         <Input
+                          id = "deliveryAddress"
                           type="text"
                           label="Enter your delivery address"
                           className="pb-5"
@@ -228,16 +250,8 @@ const handleSuburbChange = (option) => {
                   Proceed to Payment
                   </Link> */}
 
-                  <button onClick={(() => [
-                    checkout({
-                      lineItems: [
-                        {
-                          price: totalAmount
-                        }
-                      ]
-                    })
-                  ])}
-                    type="submit"
+                  <button
+                    onClick = {checkoutHandler}
                     id="process-payment-btn"
                     className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
                   >
