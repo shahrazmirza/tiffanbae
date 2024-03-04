@@ -3,37 +3,37 @@
     "name": "mutton biryani",
     "price": 10,
     "qty": "500 mL",
-    "category": "mutton"
+    "category": "rice"
   },
   {
     "name": "mutton biryani",
     "price": 14,
     "qty": "1000 mL",
-    "category": "mutton"
+    "category": "rice"
   },
   {
     "name": "mutton biryani",
     "price": 80,
     "qty": "1 kg",
-    "category": "mutton"
+    "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 10,
     "qty": "500 mL",
-    "category": "beef"
+    "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 14,
     "qty": "1000 mL",
-    "category": "beef"
+    "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 80,
     "qty": "1 kg",
-    "category": "beef"
+    "category": "rice"
   },
   {
     "name": "kaali mirch karahi",
@@ -144,48 +144,66 @@
     "category": "mutton"
   },
   {
-    "name": "pulao",
+    "name": "beef pulao",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "rice"
+  },
+  {
+    "name": "beef pulao",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "rice"
+  },
+  {
+    "name": "beef pulao",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "rice"
+  },
+  {
+    "name": "chicken pulao",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "rice"
+  },
+  {
+    "name": "chicken pulao",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "rice"
+  },
+  {
+    "name": "chicken pulao",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "rice"
+  },
+  {
+    "name": "mutton pulao",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "rice"
+  },
+  {
+    "name": "mutton pulao",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "rice"
+  },
+  {
+    "name": "mutton pulao",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "rice"
+  },
+  {
+    "name": "aloo gosh special masala",
     "price": 7,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "pulao",
-    "price": 12,
-    "qty": "1000 mL",
-    "category": "beef"
-  },
-  {
-    "name": "pulao",
-    "price": 80,
-    "qty": "1 kg",
-    "category": "beef"
-  },
-  {
-    "name": "pulao",
-    "price": 7,
-    "qty": "500 mL",
-    "category": "mutton"
-  },
-  {
-    "name": "pulao",
-    "price": 12,
-    "qty": "1000 mL",
-    "category": "mutton"
-  },
-  {
-    "name": "pulao",
-    "price": 80,
-    "qty": "1 kg",
-    "category": "mutton"
-  },
-  {
-    "name": "aloo gosh special masala",
-    "price": 7,
-    "qty": "500 mL",
-    "category": "beef"
-  },
-  {
     "name": "aloo gosh special masala",
     "price": 12,
     "qty": "1000 mL",
@@ -216,13 +234,13 @@
     "category": "mutton"
   },
   {
-    "name": "seekh kebab",
+    "name": "beef seekh kebab",
     "price": 14,
     "qty": "4 pieces",
     "category": "beef"
   },
   {
-    "name": "seekh kebab",
+    "name": "mutton seekh kebab",
     "price": 14,
     "qty": "4 pieces",
     "category": "mutton"
@@ -264,40 +282,40 @@
     "category": "beef"
   },
   {
-    "name": "qeema biryani",
+    "name": "mutton qeema biryani",
     "price": 6,
     "qty": "500 mL",
-    "category": "mutton"
+    "category": "rice"
   },
   {
-    "name": "qeema biryani",
+    "name": "mutton qeema biryani",
     "price": 12,
     "qty": "1000 mL",
-    "category": "mutton"
+    "category": "rice"
   },
   {
-    "name": "qeema biryani",
+    "name": "mutton qeema biryani",
     "price": 60,
     "qty": "1 kg",
-    "category": "mutton"
+    "category": "rice"
   },
   {
-    "name": "qeema biryani",
+    "name": "beef qeema biryani",
     "price": 6,
     "qty": "500 mL",
-    "category": "beef"
+    "category": "rice"
   },
   {
-    "name": "qeema biryani",
+    "name": "beef qeema biryani",
     "price": 12,
     "qty": "1000 mL",
-    "category": "beef"
+    "category": "rice"
   },
   {
-    "name": "qeema biryani",
+    "name": "beef qeema biryani",
     "price": 60,
     "qty": "1 kg",
-    "category": "beef"
+    "category": "rice"
   },
   {
     "name": "haleem",
@@ -352,6 +370,12 @@
     "price": 56,
     "qty": "1 kg",
     "category": "mutton"
+  },
+  {
+    "name": "chicken kebab",
+    "price": 20,
+    "qty": "12 pieces",
+    "category": "chicken"
   }
   
 ]
