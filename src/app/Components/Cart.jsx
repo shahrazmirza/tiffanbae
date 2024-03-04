@@ -242,11 +242,13 @@ const Cart = () => {
 
                       {selectedSuburb && (
                         <Input
-                          id = "deliveryAddress"
-                          type="text"
-                          label="Enter your delivery address"
-                          className="pb-5"
-                        />
+        id="deliveryAddress"
+        type="text"
+        label="Enter your delivery address"
+        value={deliveryAddress}
+        onChange={handleDeliveryAddressChange}
+        className="pb-5"
+      />
                       )}
                     </div>
                   )}
