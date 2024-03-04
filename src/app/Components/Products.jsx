@@ -34,11 +34,11 @@ const Products = ({ }) => {
 
   return (
     <Container>
-      <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>
+      <div className='grid'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-20 text-center'>
           MUTTON CORNER
         </p>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10 '>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14'>
         {items.filter(item => item.category === 'mutton').map((item) => (
             <li>
               <div className='border p-5'>
@@ -70,11 +70,11 @@ const Products = ({ }) => {
           ))}
         </ul>
       </div>
-      <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>
+      <div className='grid'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-20 text-center'>
           BEEF CORNER
         </p>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10 '>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14'>
         {items.filter(item => item.category === 'beef').map((item) => (
             <li>
               <div className='border p-5'>
@@ -106,9 +106,11 @@ const Products = ({ }) => {
           ))}
         </ul>
       </div>
-      <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>CHICKEN CORNER</p>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10'>
+      <div className='grid'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-20 text-center'>
+          CHICKEN CORNER
+        </p>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14'>
         {items.filter(item => item.category === 'chicken').map((item) => (
             <li>
             <div className='border p-5'>
@@ -140,9 +142,11 @@ const Products = ({ }) => {
           ))}
         </ul>
       </div>
-      <div className='grid py-10'>
-        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-10 text-center'>RICE CORNER</p>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14 p-10'>
+      <div className='grid'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-20 text-center'>
+          RICE CORNER
+        </p>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14'>
         {items.filter(item => item.category === 'rice').map((item) => (
             <li>
             <div className='border p-5'>
