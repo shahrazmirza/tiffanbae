@@ -1,248 +1,303 @@
 [
   {
-    "name": "Mutton Karahi (With Bones)",
-    "price": 34.90,
-    "description": "Goat with bones cooked in onions, tomatos, yoghurt, herbs & spices in Pakistani style",
-    "category": "Mutton"
+    "name": "mutton biryani",
+    "price": 10,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Mutton Karahi Kali Mirch",
-    "price": 34.90,
-    "description": "Goat cooked in secret Ziyka recipe with kali mirch",
-    "category": "Mutton"
+    "name": "mutton biryani",
+    "price": 14,
+    "qty": "1000 mL",
+    "category": "mutton"
   },
   {
-    "name": "Mutton Dhaba (With Bones)",
-    "price": 34.90,
-    "description": "Goat with bones cooked in special authentic ziyka sauce in Pakistani style",
-    "category": "Mutton"
+    "name": "mutton biryani",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "mutton"
   },
   {
-    "name": "Goat White Special",
-    "price": 34.90,
-    "description": "Goat cooked in white creamy nut sauce with authentic Pakistani style",
-    "category": "Mutton"
+    "name": "mutton biryani",
+    "price": 10,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Lamb Karahi Boneless",
-    "price": 34.50,
-    "description": "Lamb in authentic Pakistani style",
-    "category": "Mutton"
+    "name": "beef biryani",
+    "price": 14,
+    "qty": "1000 mL",
+    "category": "beef"
   },
   {
-    "name": "Lamb Karahi Kali Mirch (Boneless)",
-    "price": 34.90,
-    "description": "Lamb in authentic Pakistani style cooked with Kali Mirch",
-    "category": "Mutton"
+    "name": "beef biryani",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "beef"
   },
   {
-    "name": "Lamb Palak",
-    "price": 34.90,
-    "description": "Diced lamb/ beef cooked with spinach in cashew nut paste,onions and green chilli",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 12,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Lamb Masala",
-    "price": 18.50,
-    "description": "Diced peice of lamb pan fried with onions,tomatoes & spices",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 22,
+    "qty": "1000 mL",
+    "category": "mutton"
   },
   {
-    "name": "Lamb Korma",
-    "price": 18.50,
-    "description": "Diced peice of lamb cooked with tomatoes,onions,nuts & cream",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 30,
+    "qty": "1 kg",
+    "category": "mutton"
   },
   {
-    "name": "Lamb Rogan Josh",
-    "price": 18.50,
-    "description": "Lamb / Beef cooked in yoghurt and cream with special spices",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 12,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Lamb Achari",
-    "price": 18.50,
-    "description": "Delicious bonless lamb stewed in special mixture of spices & pickles",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 22,
+    "qty": "1000 mL",
+    "category": "beef"
   },
   {
-    "name": "Lamb Madras",
-    "price": 18.50,
-    "description": "Lamb cooked in onions & tomato sauce in traditional spices",
-    "category": "Mutton"
+    "name": "kaali mirch karahi",
+    "price": 30,
+    "qty": "1 kg",
+    "category": "beef"
   },
   {
-    "name": "Lamb Shinwari Qeema",
-    "price": 30.50,
-    "description": "Lamb mince cooked in traditional spices",
-    "category": "Mutton"
-  },  
-  {
-    "name": "Chicken Shinwari",
-    "price": 29.50,
-    "description": "Chicken cooked in tomatoes, black pepper, green chillis & ginger in authentic Pakistani heritage style",
-    "category": "Chicken"
+    "name": "shami kebab",
+    "price": 20,
+    "qty": "12 pieces",
+    "category": "beef"
   },
   {
-    "name": "Chicken Karahi Kali Mirch (Boneless)",
-    "price": 29.50,
-    "description": "Boneless chicken cooked in Kali Mirch with secret Ziyka karahi recipe",
-    "category": "Chicken"
+    "name": "shami kebab",
+    "price": 20,
+    "qty": "12 pieces",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Karahi Kali Mirch (With Bone)",
-    "price": 29.50,
-    "description": "Chicken with bones cooked in kali mirch with secret Ziyka karahi recipe heritage style",
-    "category": "Chicken"
+    "name": "chapli kebab",
+    "price": 20,
+    "qty": "12 pieces",
+    "category": "beef"
   },
   {
-    "name": "Chicken Kebeb Karahi",
-    "price": 29.50,
-    "description": "",
-    "category": "Chicken"
+    "name": "chapli kebab",
+    "price": 20,
+    "qty": "12 pieces",
+    "category": "mutton"
   },
   {
-    "name": "Lahori Chicken Karahi (with Bones)",
-    "price": 29.50,
-    "description": "",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 12,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Bharta",
-    "price": 23.00,
-    "description": "Delicious finger cut chicken fusion of cabbage, carrots, capsicums cooked in authentic Pakistani Style",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 22,
+    "qty": "1000 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Karahi (Boneless)",
-    "price": 27.50,
-    "description": "Diced Chicken cooked in authentic Pakistani Style",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 30,
+    "qty": "1 kg",
+    "category": "mutton"
   },
   {
-    "name": "Chicken White Karahi",
-    "price": 20.50,
-    "description": "Breast Diced Chicken cooked in onion & creamy sauce with special sauce",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 12,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Cheese Handi",
-    "price": 20.50,
-    "description": "Breast Diced Chicken cooked in cheese sauce,yoghurt & herb",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 22,
+    "qty": "1000 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Kasturi Handi",
-    "price": 20.50,
-    "description": "Breast Diced Chicken cooked in onion sauce & freshly ground spices",
-    "category": "Chicken"
+    "name": "garam masala curry",
+    "price": 30,
+    "qty": "1 kg",
+    "category": "beef"
   },
   {
-    "name": "Ziyka Special",
-    "price": 20.50,
-    "description": "Breast Diced Chicken cooked in almond pure,yoghurt & spices",
-    "category": "Chicken"
+    "name": "qeema special style",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Kebab Masala",
-    "price": 20.50,
-    "description": "BBQ Chicken Kebabs cooked in the clay oven & toasted with onions & capsicum",
-    "category": "Chicken"
+    "name": "qeema special style",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Tikka Masala",
-    "price": 20.50,
-    "description": "BBQ Chicken marinated overnight & cooked in tomato & onion based sause with traditional herbs & capsicums",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Jalfrezi",
-    "price": 20.50,
-    "description": "Boneless Chicken cooked with capsicums & onions with manchurian sauces",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Ginger",
-    "price": 20.50,
-    "description": "Boneless Chicken marinated with ginger & garlic & cooked in chef special sauce and spices",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "beef"
   },
   {
-    "name": "Chicken Madras",
-    "price": 20.50,
-    "description": "Boneless Chicken cooked in onion and tomato sauce in traditional spices",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Palak",
-    "price": 20.50,
-    "description": "Boneless Chicken cooked in a light creamy sauce with herbs & spices",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chikken Achari",
-    "price": 20.50,
-    "description": "Delicious Bonless Chicken stewed in special mixture of spices & pickles",
-    "category": "Chicken"
+    "name": "pulao",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Manchurian",
-    "price": 20.50,
-    "description": "Fried battered Chicken with onions and capsicums cooked in manchurian spices",
-    "category": "Chicken"
+    "name": "aloo gosh special masala",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "beef"
   },
   {
-    "name": "Chicken Handi",
-    "price": 20.50,
-    "description": "Bonless Chicken stewed in onion & tomato based sauce with chef spices",
-    "category": "Chicken"
+    "name": "aloo gosh special masala",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "beef"
   },
   {
-    "name": "Chikken Korma",
-    "price": 20.50,
-    "description": "Boneless Chicken cooked with spices in almond sauce & garnished with roasted cashews",
-    "category": "Chicken"
+    "name": "aloo gosh special masala",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "beef"
   },
   {
-    "name": "Butter Chicken",
-    "price": 20.50,
-    "description": "Chicken cooked in makhani sauce, cashew nuts & fresh cream with spices",
-    "category": "Chicken"
+    "name": "aloo gosh special masala",
+    "price": 7,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Tawa Keema",
-    "price": 25.90,
-    "description": "Chicken keema cooked on tawa",
-    "category": "Chicken"
+    "name": "aloo gosh special masala",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Biryani",
-    "price": 16.50,
-    "description": "",
-    "category": "Rice"
+    "name": "aloo gosh special masala",
+    "price": 80,
+    "qty": "1 kg",
+    "category": "mutton"
   },
   {
-    "name": "Beef Biryani",
-    "price": 20.00,
-    "description": "",
-    "category": "Rice"
+    "name": "seekh kebab",
+    "price": 14,
+    "qty": "4 pieces",
+    "category": "beef"
   },
   {
-    "name": "Goat Pulao",
-    "price": 22.00,
-    "description": "",
-    "category": "Rice"
+    "name": "seekh kebab",
+    "price": 14,
+    "qty": "4 pieces",
+    "category": "mutton"
   },
   {
-    "name": "Chicken Fried Rice",
-    "price": 14.00,
-    "description": "",
-    "category": "Rice"
+    "name": "matar qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "mutton"
   },
   {
-    "name": "Plain Rice",
-    "price": 6.50,
-    "description": "",
-    "category": "Rice"
+    "name": "matar qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "aloo qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "aloo qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "shimla mirch qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "shimla mirch qeema",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 6,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 60,
+    "qty": "1 kg",
+    "category": "mutton"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 6,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "beef"
+  },
+  {
+    "name": "qeema biryani",
+    "price": 60,
+    "qty": "1 kg",
+    "category": "beef"
   }
+  
 ]
