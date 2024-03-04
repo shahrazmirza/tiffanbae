@@ -18,7 +18,7 @@
     "category": "mutton"
   },
   {
-    "name": "mutton biryani",
+    "name": "beef biryani",
     "price": 10,
     "qty": "500 mL",
     "category": "beef"
@@ -298,6 +298,60 @@
     "price": 60,
     "qty": "1 kg",
     "category": "beef"
+  },
+  {
+    "name": "haleem",
+    "price": 10,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "haleem",
+    "price": 15,
+    "qty": "1000 mL",
+    "category": "beef"
+  },
+  {
+    "name": "haleem",
+    "price": 50,
+    "qty": "1 kg",
+    "category": "beef"
+  },
+  {
+    "name": "nihari",
+    "price": 10,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "nihari",
+    "price": 15,
+    "qty": "1000 mL",
+    "category": "beef"
+  },
+  {
+    "name": "nihari",
+    "price": 50,
+    "qty": "1 kg",
+    "category": "beef"
+  },
+  {
+    "name": "kunna",
+    "price": 15,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "kunna",
+    "price": 20,
+    "qty": "1000 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "kunna",
+    "price": 56,
+    "qty": "1 kg",
+    "category": "mutton"
   }
   
 ]
