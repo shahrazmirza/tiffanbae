@@ -36,109 +36,109 @@
     "category": "rice"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "mutton kaali mirch karahi",
     "price": 12,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "mutton kaali mirch karahi",
     "price": 22,
     "qty": "1000 mL",
     "category": "mutton"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "mutton kaali mirch karahi",
     "price": 30,
     "qty": "1 kg",
     "category": "mutton"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "beef kaali mirch karahi",
     "price": 12,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "beef kaali mirch karahi",
     "price": 22,
     "qty": "1000 mL",
     "category": "beef"
   },
   {
-    "name": "kaali mirch karahi",
+    "name": "beef kaali mirch karahi",
     "price": 30,
     "qty": "1 kg",
     "category": "beef"
   },
   {
-    "name": "shami kebab",
+    "name": "beef shami kebab",
     "price": 20,
     "qty": "12 pieces",
     "category": "beef"
   },
   {
-    "name": "shami kebab",
+    "name": "mutton shami kebab",
     "price": 20,
     "qty": "12 pieces",
     "category": "mutton"
   },
   {
-    "name": "chapli kebab",
+    "name": "beef chapli kebab",
     "price": 20,
     "qty": "12 pieces",
     "category": "beef"
   },
   {
-    "name": "chapli kebab",
+    "name": "mutton chapli kebab",
     "price": 20,
     "qty": "12 pieces",
     "category": "mutton"
   },
   {
-    "name": "garam masala curry",
+    "name": "mutton garam masala curry",
     "price": 12,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "garam masala curry",
+    "name": "mutton garam masala curry",
     "price": 22,
     "qty": "1000 mL",
     "category": "mutton"
   },
   {
-    "name": "garam masala curry",
+    "name": "mutton garam masala curry",
     "price": 30,
     "qty": "1 kg",
     "category": "mutton"
   },
   {
-    "name": "garam masala curry",
+    "name": "beef garam masala curry",
     "price": 12,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "garam masala curry",
+    "name": "beef garam masala curry",
     "price": 22,
     "qty": "1000 mL",
     "category": "beef"
   },
   {
-    "name": "garam masala curry",
+    "name": "beef garam masala curry",
     "price": 30,
     "qty": "1 kg",
     "category": "beef"
   },
   {
-    "name": "qeema special style",
+    "name": "mutton qeema special style",
     "price": 15,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "qeema special style",
+    "name": "mutton qeema special style",
     "price": 15,
     "qty": "500 mL",
     "category": "mutton"
@@ -198,37 +198,37 @@
     "category": "rice"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "beef aloo gosh special masala",
     "price": 7,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "beef aloo gosh special masala",
     "price": 12,
     "qty": "1000 mL",
     "category": "beef"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "beef aloo gosh special masala",
     "price": 80,
     "qty": "1 kg",
     "category": "beef"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "mutton aloo gosh special masala",
     "price": 7,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "mutton aloo gosh special masala",
     "price": 12,
     "qty": "1000 mL",
     "category": "mutton"
   },
   {
-    "name": "aloo gosh special masala",
+    "name": "mutton aloo gosh special masala",
     "price": 80,
     "qty": "1 kg",
     "category": "mutton"
@@ -246,37 +246,37 @@
     "category": "mutton"
   },
   {
-    "name": "matar qeema",
+    "name": "mutton matar qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "matar qeema",
+    "name": "beef matar qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "aloo qeema",
+    "name": "mutton aloo qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "aloo qeema",
+    "name": "beef aloo qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "beef"
   },
   {
-    "name": "shimla mirch qeema",
+    "name": "mutton shimla mirch qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "mutton"
   },
   {
-    "name": "shimla mirch qeema",
+    "name": "beef shimla mirch qeema",
     "price": 15,
     "qty": "500 mL",
     "category": "beef"
@@ -376,6 +376,29 @@
     "price": 20,
     "qty": "12 pieces",
     "category": "chicken"
+  },
+  {
+    "name": "chicken veg chowmein",
+    "price": 14,
+    "qty": "650 mL",
+    "category": "chicken"
+  },
+  {
+    "name": "chicken fried rice",
+    "price": 14,
+    "qty": "1000 mL",
+    "category": "rice"
+  },
+  {
+    "name": "chicken achari",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "chicken"
+  },
+  {
+    "name": "butter chicken",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "chicken"
   }
-  
 ]

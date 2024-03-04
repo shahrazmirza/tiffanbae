@@ -46,7 +46,7 @@ const Products = ({ }) => {
                   <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                     {item.name}
                   </p>
-                  <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                  <p className='font-bold text-base md:text-xl font-heading2 uppercase text-neutral-600'>
                   ${item.price.toFixed(2)}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const Products = ({ }) => {
                   <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                     {item.name}
                   </p>
-                  <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                  <p className='font-bold text-base md:text-xl font-heading2 uppercase text-neutral-600'>
                   ${item.price.toFixed(2)}
                   </p>
                 </div>
@@ -116,7 +116,7 @@ const Products = ({ }) => {
                 <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                   {item.name}
                 </p>
-                <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                <p className='font-bold text-base md:text-xl font-heading2 uppercase text-neutral-600'>
                 ${item.price.toFixed(2)}
                 </p>
               </div>
@@ -150,7 +150,7 @@ const Products = ({ }) => {
                 <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                   {item.name}
                 </p>
-                <p className='font-bold text-xl md:text-xl font-heading2 uppercase text-neutral-600'>
+                <p className='font-bold text-base md:text-xl font-heading2 uppercase text-neutral-600'>
                 ${item.price.toFixed(2)}
                 </p>
               </div>
