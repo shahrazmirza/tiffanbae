@@ -400,5 +400,113 @@
     "price": 14,
     "qty": "500 mL",
     "category": "chicken"
+  },
+  {
+    "name": "chicken aloo special style",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "chicken"
+  },
+  {
+    "name": "chicken kaali mirch karahi",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "chicken"
+  },
+  {
+    "name": "malai chicken",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "chicken"
+  },
+  {
+    "name": "chicken biryani",
+    "price": 8,
+    "qty": "500 mL",
+    "category": "rice"
+  },
+  {
+    "name": "chicken biryani",
+    "price": 12,
+    "qty": "1000 mL",
+    "category": "rice"
+  },
+  {
+    "name": "chicken biryani",
+    "price": 70,
+    "qty": "1 kg",
+    "category": "rice"
+  },
+  {
+    "name": "beef palak gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton palak gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "beef bhindi gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton bhindi gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "beef arvi gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton arvi gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "beef chukandar gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton chukandar gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "beef loki gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton loki gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
+  },
+  {
+    "name": "beef daal gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "beef"
+  },
+  {
+    "name": "mutton daal gosht",
+    "price": 14,
+    "qty": "500 mL",
+    "category": "mutton"
   }
 ]
