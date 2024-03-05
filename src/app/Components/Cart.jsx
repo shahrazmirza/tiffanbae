@@ -271,7 +271,7 @@ const Cart = () => {
 
                   <Link
                     href="/Menu"
-                    className="px-4 py-3 inline-block text-lg w-full text-center font-medium text-orange-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100"
+                    className="px-4 py-3 mt-3 inline-block text-lg w-full text-center font-medium text-orange-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100"
                   >
                     Back to shop
                   </Link>
