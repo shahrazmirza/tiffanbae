@@ -49,7 +49,7 @@ const SignInForm = (props: Props) => {
       return;
     }
     toast.success("Welcome To Tiffan Bae");
-    router.push(props.callbackUrl ? props.callbackUrl : "/Order");
+    router.push(props.callbackUrl ? props.callbackUrl : "/Menu");
   };
 
   return (
