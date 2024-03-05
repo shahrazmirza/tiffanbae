@@ -60,7 +60,7 @@ const Products = ({ }) => {
                   <div></div>
                   <Button
                     onClick={() => handleAddToCart(item)} 
-                    className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                    className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
                     <HiOutlineShoppingCart />
                     Add to Cart
                   </Button>
@@ -96,7 +96,7 @@ const Products = ({ }) => {
                   <div></div>
                   <Button
                     onClick={() => handleAddToCart(item)} 
-                    className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                    className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
                     <HiOutlineShoppingCart />
                     Add to Cart
                   </Button>
@@ -132,7 +132,7 @@ const Products = ({ }) => {
                 <div></div>
                 <Button
                   onClick={() => handleAddToCart(item)} 
-                  className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                  className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
                   <HiOutlineShoppingCart />
                   Add to Cart
                 </Button>
@@ -167,7 +167,7 @@ const Products = ({ }) => {
                 <div></div>
                 <Button
                   onClick={() => handleAddToCart(item)} 
-                  className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 cursor-pointer'>
+                  className='flex items-center justify-center p-3 mt-1 text-sm leading-none text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
                   <HiOutlineShoppingCart />
                   Add to Cart
                 </Button>

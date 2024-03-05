@@ -109,7 +109,7 @@ const Cart = () => {
                             {/* <figure className="block w-16 h-16 rounded border border-gray-200 overflow-hidden">
                               <img src={cartItem.image} alt={cartItem.name} />
                             </figure> */}
-                            <productName className="ml-3">
+                            <productName className="ml-3 capitalize">
                               <p>{cartItem.name}</p>
                             </productName>
                           </div>
