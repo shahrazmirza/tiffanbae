@@ -12,7 +12,7 @@ const CartPage = () => {
       <Navbar />
       <Whatsapp />
       <Scroll_to_top />
-      <div className='flex justify-center items-center h-96'>
+      <div className='flex justify-center items-center h-96 relative'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image
             src='/assets/hero4.jpg'
@@ -21,8 +21,10 @@ const CartPage = () => {
             objectFit='cover'
           />
         </div>
-        <div>
-          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s z-10'>shopping cart</p>
+        <div className='relative z-10'>
+          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'>
+            shopping cart
+          </p>
         </div>
       </div>
       <Cart />

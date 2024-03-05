@@ -10,7 +10,7 @@ const Contact = () => {
     <div className='mh-screen'>
       <Navbar />
       <Whatsapp />
-      <div className='flex justify-center items-center h-96'>
+      <div className='flex justify-center items-center h-96 relative'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image
             src='/assets/hero3.jpg'
@@ -19,8 +19,10 @@ const Contact = () => {
             objectFit='cover'
           />
         </div>
-        <div>
-          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s z-10'>contact us</p>
+        <div className='relative z-10'>
+          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'>
+            contact us
+          </p>
         </div>
       </div>
 

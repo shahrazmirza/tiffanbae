@@ -26,7 +26,7 @@ const Menu = () => {
       <Navbar />
       <Scroll_to_top />
       <Whatsapp />
-      <div className='flex justify-center items-center h-96'>
+      <div className='flex justify-center items-center h-96 relative'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image
             src='/assets/hero2.jpg'
@@ -35,8 +35,10 @@ const Menu = () => {
             objectFit='cover'
           />
         </div>
-        <div>
-          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s z-10'>the menu</p>
+        <div className='relative z-10'>
+          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'>
+            the menu
+          </p>
         </div>
       </div>
       

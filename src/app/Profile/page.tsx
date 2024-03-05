@@ -14,7 +14,7 @@ const ProfilePage = async () => {
       <Navbar />
       <Scroll_to_top />
       <Whatsapp />
-      <div className='flex justify-center items-center h-96'>
+      <div className='flex justify-center items-center h-96 relative'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image
             src='/assets/hero5.jpg'
@@ -23,10 +23,13 @@ const ProfilePage = async () => {
             objectFit='cover'
           />
         </div>
-        <div>
-          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s z-10'>Profile</p>
+        <div className='relative z-10'>
+          <p className='font-heading1 text-6xl font-bold capitalize tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'>
+            Profile
+          </p>
         </div>
       </div>
+
       <div className="flex flex-col justify-center items-center pt-20">
         <div className="grid grid-cols-4 gap-5 text-nowrap md:gap-5 justify-center px-10">
           <p>First Name:</p> <p className="col-span-3 px-4">{user?.firstName}</p>
