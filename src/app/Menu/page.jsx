@@ -7,6 +7,7 @@ import Products from '../Components/Products';
 import Scroll_to_top from '../Components/Scroll_to_top';
 import Whatsapp from '../Components/Whatsapp';
 import 'animate.css';
+import Banner from '../Components/Banner'
 
 const Menu = () => {
   const [items, setItems] = useState([]);
@@ -41,13 +42,7 @@ const Menu = () => {
           </p>
         </div>
       </div>
-      
-      <div className="w-screen bg-gray-200 py-1">
-        <h2 className='flex flex-col md:flex-row md:text-base text-sm font-semibold justify-center text-center md:animate-marquee'>
-          Place your order by 12:00 pm for pickup next day <span className='text-red-500 px-2'>OR</span> <p>Place your order by 12:00 pm this Thursday for delivery on Saturday.</p>
-        </h2>
-      </div>
-        
+      <Banner />
       <Products />
     </div>
   )

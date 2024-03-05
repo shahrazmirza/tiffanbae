@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Whatsapp from '../Components/Whatsapp';
 import Cart from '../Components/Cart';
 import Scroll_to_top from '../Components/Scroll_to_top';
+import Banner from '../Components/Banner'
 
 const CartPage = () => {
   return (
@@ -27,6 +28,7 @@ const CartPage = () => {
           </p>
         </div>
       </div>
+      <Banner />
       <Cart />
     </div>
   );
