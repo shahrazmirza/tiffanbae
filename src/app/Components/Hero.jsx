@@ -8,7 +8,7 @@ import 'animate.css';
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState('/assets/hero1.jpg');
-  const images = ['/assets/hero1.jpg', '/assets/hero2.jpg', '/assets/hero3.jpg', '/assets/hero4.jpg']; 
+  const images = ['/assets/hero1.jpg', '/assets/hero2.jpg', '/assets/hero3.jpg', '/assets/hero4.jpg', '/assets/hero5.jpg']; 
 
   const handleNextImage = () => {
     const currentIndex = images.indexOf(currentImage);

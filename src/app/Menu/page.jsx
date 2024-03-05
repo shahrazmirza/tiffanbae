@@ -29,7 +29,7 @@ const Menu = () => {
       <div className='flex justify-center items-center h-96'>
         <div className='absolute inset-0 overflow-hidden h-96'>
           <Image
-            src='/assets/hero1.jpg'
+            src='/assets/hero2.jpg'
             alt='Hero Image'
             layout='fill'
             objectFit='cover'
