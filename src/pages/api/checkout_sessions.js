@@ -9,7 +9,7 @@ export default async function handler(req, res) {
             price_data: {
                 currency: "aud",
                 product_data: {
-                    name: item.name,
+                    name: item.name.toUpperCase(),
                 },
                 unit_amount: item.price * 100,
             },
