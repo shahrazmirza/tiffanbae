@@ -9,7 +9,7 @@ export default async function handler(req, res) {
             price_data: {
                 currency: "aud",
                 product_data: {
-                    name: item.name,
+                  name: item.name.toUpperCase(),
                 },
                 unit_amount: item.price * 100,
             },
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       const session = await stripe.checkout.sessions.create({
         line_items: transformedItems,
         mode: 'payment',
-        success_url: `${req.headers.origin}/success`,
+        success_url: `${req.headers.origin}/Success`,
         cancel_url: `${req.headers.origin}/cancel`,
       });
       res.json({"sessionURL": session.url});
