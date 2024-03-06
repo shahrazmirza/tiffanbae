@@ -66,45 +66,45 @@ const Cart = () => {
     setDeliveryAddress(event.target.value);
   };
   
-  // const handleCheckout = async () => {
-  //   if (!selectedMethod) {
-  //     return toast.error("Please select a method");
-  //   } else if (
-  //     selectedMethod.toLowerCase() === "delivery" &&
-  //     !selectedSuburb
-  //   ) {
-  //     return toast.error("Please choose your delivery suburb");
-  //   } else if (
-  //     selectedMethod.toLowerCase() === "delivery" &&
-  //     selectedSuburb &&
-  //     !deliveryAddress
-  //   ) {
-  //     return toast.error("Please enter your delivery address");
-  //   } else {
-  //     // Continue with the checkout process
-  //     try {
-  //       const response = await axios.post(
-  //         '../../pages/api/checkout_sessions.js',
-  //         { cartItem }
-  //       );
-  //       console.log(response);
-  //       window.location = response.data.sessionURL;
-  //     } catch (error) {
-  //       console.error("Error creating checkout session:", error);
-  //       // Handle the error as needed
-  //     }
-  //   }
-  // };
+  const handleCheckout = async () => {
+    if (!selectedMethod) {
+      return toast.error("Please select a method");
+    } else if (
+      selectedMethod.toLowerCase() === "delivery" &&
+      !selectedSuburb
+    ) {
+      return toast.error("Please choose your delivery suburb");
+    } else if (
+      selectedMethod.toLowerCase() === "delivery" &&
+      selectedSuburb &&
+      !deliveryAddress
+    ) {
+      return toast.error("Please enter your delivery address");
+    } else {
+      // Continue with the checkout process
+      try {
+        const response = await axios.post(
+          'api/checkout_sessions',
+          { cartItem: cart.cartItems }
+        );
+        console.log(response);
+        window.location = response.data.sessionURL;
+      } catch (error) {
+        console.error("Error creating checkout session:", error);
+        // Handle the error as needed
+      }
+    }
+  };
 
-  const createCheckoutSession = async () => {
+//   const createCheckoutSession = async () => {
 
-    axios.post('api/checkout_sessions', { cartItem })
-        .then(res => {
-            console.log(res)
-            window.location = res.data.sessionURL
-        })
-        .catch(err => console.log(err))
-}
+//     axios.post('api/checkout_sessions', { cartItem })
+//         .then(res => {
+//             console.log(res)
+//             window.location = res.data.sessionURL
+//         })
+//         .catch(err => console.log(err))
+// }
 
   return (
     <div>
@@ -294,7 +294,7 @@ const Cart = () => {
                   </button> */}
 
                   <button
-                    onClick={createCheckoutSession}
+                    onClick={handleCheckout}
                     id="process-payment-btn"
                     className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
                   >
