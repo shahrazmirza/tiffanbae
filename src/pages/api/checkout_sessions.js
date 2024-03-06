@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         line_items: transformedItems,
         mode: 'payment',
         success_url: `${req.headers.origin}/Success`,
-        cancel_url: `${req.headers.origin}/cancel`,
+        cancel_url: `${req.headers.origin}/Cancel`,
       });
       res.json({"sessionURL": session.url});
     } catch (err) {
