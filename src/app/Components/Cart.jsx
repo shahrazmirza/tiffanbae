@@ -9,6 +9,7 @@ import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
 import PaymentForm from '../Components/PaymentForm';
 import { toast } from 'react-toastify';
+import axios from "axios";
 
 const Cart = () => {
   const { addItemToCart, deleteItemFromCart, cart } = useContext(CartContext);
@@ -65,25 +66,45 @@ const Cart = () => {
     setDeliveryAddress(event.target.value);
   };
   
-  const checkoutHandler = async () => {
-    if (!selectedMethod) {
-      return toast.error("Please select a method");
-    } else if (
-      (selectedMethod.toLowerCase() === "delivery") &&
-      !selectedSuburb
-    ) {
-      return toast.error("Please choose your delivery suburb");
-    } else if (
-      (selectedMethod.toLowerCase() === "delivery") &&
-      selectedSuburb &&
-      !deliveryAddress
-    ) {
-      return toast.error("Please enter your delivery address");
-    } else {
-      // Continue with the checkout process
-      // Your logic here...
-    }
-  };
+  // const handleCheckout = async () => {
+  //   if (!selectedMethod) {
+  //     return toast.error("Please select a method");
+  //   } else if (
+  //     selectedMethod.toLowerCase() === "delivery" &&
+  //     !selectedSuburb
+  //   ) {
+  //     return toast.error("Please choose your delivery suburb");
+  //   } else if (
+  //     selectedMethod.toLowerCase() === "delivery" &&
+  //     selectedSuburb &&
+  //     !deliveryAddress
+  //   ) {
+  //     return toast.error("Please enter your delivery address");
+  //   } else {
+  //     // Continue with the checkout process
+  //     try {
+  //       const response = await axios.post(
+  //         '../../pages/api/checkout_sessions.js',
+  //         { cartItem }
+  //       );
+  //       console.log(response);
+  //       window.location = response.data.sessionURL;
+  //     } catch (error) {
+  //       console.error("Error creating checkout session:", error);
+  //       // Handle the error as needed
+  //     }
+  //   }
+  // };
+
+  const createCheckoutSession = async () => {
+
+    axios.post('api/checkout_sessions', { cartItem })
+        .then(res => {
+            console.log(res)
+            window.location = res.data.sessionURL
+        })
+        .catch(err => console.log(err))
+}
 
   return (
     <div>
@@ -242,13 +263,13 @@ const Cart = () => {
 
                       {selectedSuburb && (
                         <Input
-        id="deliveryAddress"
-        type="text"
-        label="Enter your delivery address"
-        value={deliveryAddress}
-        onChange={handleDeliveryAddressChange}
-        className="pb-5"
-      />
+                          id="deliveryAddress"
+                          type="text"
+                          label="Enter your delivery address"
+                          value={deliveryAddress}
+                          onChange={handleDeliveryAddressChange}
+                          className="pb-5"
+                        />
                       )}
                     </div>
                   )}
@@ -257,12 +278,27 @@ const Cart = () => {
                   Proceed to Payment
                   </Link> */}
 
-                  <button
-                    onClick = {checkoutHandler}
+                  {/* <button
+                    onClick={() => {
+                      const handleButtonClick = () => {
+                        checkoutHandler();
+                        createCheckoutSession();
+                      };
+                  
+                      handleButtonClick();
+                    }}
                     id="process-payment-btn"
                     className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
                   >
-                    Confirm & pay
+                    Checkout
+                  </button> */}
+
+                  <button
+                    onClick={createCheckoutSession}
+                    id="process-payment-btn"
+                    className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
+                  >
+                    Checkout
                   </button>
         
                   {/* <div className='py-3'>
