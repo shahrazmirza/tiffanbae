@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { createContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
@@ -22,24 +22,26 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  const addItemToCart = async ({ name, price, quantity = 1 }) => {
-    const item = { name, price, quantity };
+  const addItemToCart = async ({ name, size, price, quantity = 1 }) => {
+  const item = { name, size, price, quantity };
 
-    const isItemExist = cart?.cartItems?.find((i) => i.name === item.name);
+  const isItemExistIndex = cart?.cartItems?.findIndex(
+    (i) => i.name === name && i.size === size
+  );
 
-    let newCartItems;
+  let newCartItems;
 
-    if (isItemExist) {
-      newCartItems = cart?.cartItems?.map((i) =>
-        i.name === isItemExist.name ? item : i
-      );
-    } else {
-      newCartItems = [...(cart?.cartItems || []), item];
-    }
+  if (isItemExistIndex !== -1) {
+    newCartItems = cart?.cartItems?.map((item, index) =>
+      index === isItemExistIndex ? { ...item, quantity: item.quantity + quantity } : item
+    );
+  } else {
+    newCartItems = [...(cart?.cartItems || []), item];
+  }
 
-    localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
-    setCartToState();
-  };
+  localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
+  setCartToState();
+};
 
   const deleteItemFromCart = (id) => {
     const newCartItems = cart?.cartItems?.filter((i) => i.name !== id);

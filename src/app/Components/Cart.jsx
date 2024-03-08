@@ -126,13 +126,14 @@ const Cart = () => {
                     <div>
                       <div className="flex flex-wrap lg:flex-row gap-5 mb-4 place-items-center">
                         <div className="w-full lg:w-2/5 xl:w-2/4">
-                          <div className="flex leading-5">
-                            {/* <figure className="block w-16 h-16 rounded border border-gray-200 overflow-hidden">
-                              <img src={cartItem.image} alt={cartItem.name} />
-                            </figure> */}
-                            <productName className="ml-3 capitalize">
-                              <p>{cartItem.name}</p>
-                            </productName>
+                          <div className="flex flex-col leading-5">
+                            <div>
+                              {/* <figure className="block w-16 h-16 rounded border border-gray-200 overflow-hidden">
+                                <img src={cartItem.image} alt={cartItem.name} />
+                              </figure> */}
+                              <p className='ml-3 capitalize'>{cartItem.name}</p>
+                            </div>
+                            <p className='ml-3 text-sm italic text-neutral-600 pt-1'>{cartItem.size}</p>
                           </div>
                         </div>
                         <div className="w-24">

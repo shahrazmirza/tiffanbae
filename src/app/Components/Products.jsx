@@ -26,6 +26,7 @@ const Products = ({ }) => {
       addItemToCart({
         name: item.name,
         price: item.price,
+        size: item.size,
       });
     } else {
       signIn();
@@ -52,7 +53,7 @@ const Products = ({ }) => {
                 </div>
                 <div className='flex justify-between'>
                   <p className='text-sm md:text-base italic font-normal text-neutral-600 pt-1'>
-                    {item.qty}
+                    {item.size}
                   </p>
                   <div></div>
                 </div>
@@ -88,7 +89,7 @@ const Products = ({ }) => {
                 </div>
                 <div className='flex justify-between'>
                   <p className='text-sm md:text-base italic font-normal text-neutral-600 pt-1'>
-                    {item.qty}
+                    {item.size}
                   </p>
                   <div></div>
                 </div>
@@ -124,7 +125,7 @@ const Products = ({ }) => {
               </div>
               <div className='flex justify-between'>
                 <p className='text-sm md:text-base italic font-normal text-neutral-600 pt-1'>
-                  {item.qty}
+                  {item.size}
                 </p>
                 <div></div>
               </div>
@@ -160,7 +161,7 @@ const Products = ({ }) => {
               </div>
               <div className='flex justify-between'>
                 <p className='text-sm md:text-base italic font-normal text-neutral-600 pt-1'>
-                  {item.qty}
+                  {item.size}
                 </p>
               </div>
               <div className='flex justify-between'>

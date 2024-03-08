@@ -2,511 +2,511 @@
   {
     "name": "mutton biryani",
     "price": 10,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "mutton biryani",
     "price": 14,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "mutton biryani",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 10,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 14,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "beef biryani",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "mutton kaali mirch karahi",
     "price": 12,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "mutton kaali mirch karahi",
     "price": 22,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "mutton"
   },
   {
     "name": "mutton kaali mirch karahi",
     "price": 30,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "mutton"
   },
   {
     "name": "beef kaali mirch karahi",
     "price": 12,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "beef kaali mirch karahi",
     "price": 22,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "beef"
   },
   {
     "name": "beef kaali mirch karahi",
     "price": 30,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "beef"
   },
   {
     "name": "beef shami kebab",
     "price": 20,
-    "qty": "12 pieces",
+    "size": "12 pieces",
     "category": "beef"
   },
   {
     "name": "mutton shami kebab",
     "price": 20,
-    "qty": "12 pieces",
+    "size": "12 pieces",
     "category": "mutton"
   },
   {
     "name": "beef chapli kebab",
     "price": 20,
-    "qty": "12 pieces",
+    "size": "12 pieces",
     "category": "beef"
   },
   {
     "name": "mutton chapli kebab",
     "price": 20,
-    "qty": "12 pieces",
+    "size": "12 pieces",
     "category": "mutton"
   },
   {
     "name": "mutton garam masala curry",
     "price": 12,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "mutton garam masala curry",
     "price": 22,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "mutton"
   },
   {
     "name": "mutton garam masala curry",
     "price": 30,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "mutton"
   },
   {
     "name": "beef garam masala curry",
     "price": 12,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "beef garam masala curry",
     "price": 22,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "beef"
   },
   {
     "name": "beef garam masala curry",
     "price": 30,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "beef"
   },
   {
     "name": "mutton qeema special style",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton qeema special style",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef pulao",
     "price": 7,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "beef pulao",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "beef pulao",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "chicken pulao",
     "price": 7,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "chicken pulao",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "chicken pulao",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "mutton pulao",
     "price": 7,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "mutton pulao",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "mutton pulao",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "beef aloo gosh special masala",
     "price": 7,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "beef aloo gosh special masala",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "beef"
   },
   {
     "name": "beef aloo gosh special masala",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "beef"
   },
   {
     "name": "mutton aloo gosh special masala",
     "price": 7,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "mutton aloo gosh special masala",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "mutton"
   },
   {
     "name": "mutton aloo gosh special masala",
     "price": 80,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "mutton"
   },
   {
     "name": "beef seekh kebab",
     "price": 14,
-    "qty": "4 pieces",
+    "size": "4 pieces",
     "category": "beef"
   },
   {
     "name": "mutton seekh kebab",
     "price": 14,
-    "qty": "4 pieces",
+    "size": "4 pieces",
     "category": "mutton"
   },
   {
     "name": "mutton matar qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef matar qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton aloo qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef aloo qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton shimla mirch qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef shimla mirch qeema",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton qeema biryani",
     "price": 6,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "mutton qeema biryani",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "mutton qeema biryani",
     "price": 60,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "beef qeema biryani",
     "price": 6,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "beef qeema biryani",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "beef qeema biryani",
     "price": 60,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "haleem",
     "price": 10,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "haleem",
     "price": 15,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "beef"
   },
   {
     "name": "haleem",
     "price": 50,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "beef"
   },
   {
     "name": "nihari",
     "price": 10,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "nihari",
     "price": 15,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "beef"
   },
   {
     "name": "nihari",
     "price": 50,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "beef"
   },
   {
     "name": "kunna",
     "price": 15,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "kunna",
     "price": 20,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "mutton"
   },
   {
     "name": "kunna",
     "price": 56,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "mutton"
   },
   {
     "name": "chicken kebab",
     "price": 20,
-    "qty": "12 pieces",
+    "size": "12 pieces",
     "category": "chicken"
   },
   {
     "name": "chicken veg chowmein",
     "price": 14,
-    "qty": "650 mL",
+    "size": "650 mL",
     "category": "chicken"
   },
   {
     "name": "chicken fried rice",
     "price": 14,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "chicken achari",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "chicken"
   },
   {
     "name": "butter chicken",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "chicken"
   },
   {
     "name": "chicken aloo special style",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "chicken"
   },
   {
     "name": "chicken kaali mirch karahi",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "chicken"
   },
   {
     "name": "malai chicken",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "chicken"
   },
   {
     "name": "chicken biryani",
     "price": 8,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "rice"
   },
   {
     "name": "chicken biryani",
     "price": 12,
-    "qty": "1000 mL",
+    "size": "1000 mL",
     "category": "rice"
   },
   {
     "name": "chicken biryani",
     "price": 70,
-    "qty": "1 kg",
+    "size": "1 kg",
     "category": "rice"
   },
   {
     "name": "beef palak gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton palak gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef bhindi gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton bhindi gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef arvi gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton arvi gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef chukandar gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton chukandar gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef loki gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton loki gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   },
   {
     "name": "beef daal gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "beef"
   },
   {
     "name": "mutton daal gosht",
     "price": 14,
-    "qty": "500 mL",
+    "size": "500 mL",
     "category": "mutton"
   }
 ]
