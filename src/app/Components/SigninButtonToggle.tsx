@@ -15,6 +15,8 @@ const SigninButtonToggle = () => {
 
   const { cart } = useContext(CartContext);
 
+  const totalQuantity = cart?.cartItems?.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <div className="flex">
       {session && session.user ? (
@@ -22,7 +24,7 @@ const SigninButtonToggle = () => {
           <div className="flex flex-col justify-center items-center -mr-3">
             <Link href='/Cart'>
               <p 
-                className="px-2 text-orange-400 text-xs z-20 ml-1 mb-4">{cart?.cartItems?.length || 0}
+                className="px-2 text-orange-400 text-xs z-20 ml-1 mb-4">{totalQuantity || 0}
               </p>
             </Link>
             
