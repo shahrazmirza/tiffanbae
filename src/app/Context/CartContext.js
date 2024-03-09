@@ -43,12 +43,13 @@ export const CartProvider = ({ children }) => {
   setCartToState();
 };
 
-  const deleteItemFromCart = (id) => {
-    const newCartItems = cart?.cartItems?.filter((i) => i.name !== id);
+const deleteItemFromCart = (name) => {
+  const newCartItems = cart?.cartItems?.filter((item) => item.name !== name);
 
-    localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
-    setCartToState();
-  };
+  localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
+  setCartToState();
+};
+
 
   return (
     <CartContext.Provider
