@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
 };
 
   const deleteItemFromCart = (id) => {
-    const newCartItems = cart?.cartItems?.filter((i) => i.id !== id);
+    const newCartItems = cart?.cartItems?.filter((i) => i.name !== name && i.size !== size);
 
     localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
     setCartToState();
