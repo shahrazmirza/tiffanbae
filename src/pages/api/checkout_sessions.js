@@ -10,7 +10,7 @@ export default async function handler(req, res) {
                 currency: "aud",
                 product_data: {
                   name: item.name.toUpperCase(),
-                  size: item.size(),
+                  name: item.size(),
                 },
                 unit_amount: item.price * 100,
             },

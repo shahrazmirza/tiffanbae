@@ -23,14 +23,15 @@ const Cart = () => {
     addItemToCart(item);
   };
 
-  const decreaseQty = (cartItem) => {
-    const newQty = cartItem?.quantity - 1;
+const decreaseQty = (cartItem) => {
+  const newQty = cartItem?.quantity - 1; // Decrement instead of increment
+
+  if (newQty > 0) { // Check for non-negative quantity
     const item = { ...cartItem, quantity: newQty };
-
-    if (newQty <= 0) return;
-
     addItemToCart(item);
-  };
+  }
+};
+
 
   const totalAmount = Number(
     cart?.cartItems?.reduce(
@@ -178,7 +179,7 @@ const Cart = () => {
                             <a
                               className="px-4 py-2 inline-block text-red-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 cursor-pointer"
                               onClick={() =>
-                                deleteItemFromCart(cartItem?.name)
+                                deleteItemFromCart(cartItem)
                               }
                             >
                               <BsTrash3 />
