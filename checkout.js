@@ -1,6 +1,6 @@
 import {loadStripe} from '@stripe/stripe-js';
 
-export async function chekout({lineitems}){
+export async function checkout({lineitems}){
   let stripePromise = null
 
   const getStripe = () => {
