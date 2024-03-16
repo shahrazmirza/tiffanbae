@@ -7,7 +7,6 @@ import { BsTrash3 } from 'react-icons/bs';
 import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
-import PaymentForm from '../Components/PaymentForm';
 import { toast } from 'react-toastify';
 import axios from "axios";
 
@@ -23,15 +22,14 @@ const Cart = () => {
     addItemToCart(item);
   };
 
-const decreaseQty = (cartItem) => {
-  const newQty = cartItem?.quantity - 1; // Decrement instead of increment
+  const decreaseQty = (cartItem) => {
+    const newQty = cartItem?.quantity - 1; 
 
-  if (newQty > 0) { // Check for non-negative quantity
-    const item = { ...cartItem, quantity: newQty };
-    addItemToCart(item);
-  }
-};
-
+    if (newQty > 0) {
+      const item = { ...cartItem, quantity: newQty };
+      addItemToCart(item);
+    }
+  };
 
   const totalAmount = Number(
     cart?.cartItems?.reduce(
@@ -82,7 +80,6 @@ const decreaseQty = (cartItem) => {
     ) {
       return toast.error("Please enter your delivery address");
     } else {
-      // Continue with the checkout process
       try {
         const response = await axios.post(
           'api/checkout_sessions',
@@ -92,20 +89,9 @@ const decreaseQty = (cartItem) => {
         window.location = response.data.sessionURL;
       } catch (error) {
         console.error("Error creating checkout session:", error);
-        // Handle the error as needed
       }
     }
   };
-
-//   const createCheckoutSession = async () => {
-
-//     axios.post('api/checkout_sessions', { cartItem })
-//         .then(res => {
-//             console.log(res)
-//             window.location = res.data.sessionURL
-//         })
-//         .catch(err => console.log(err))
-// }
 
   return (
     <div>
@@ -276,25 +262,6 @@ const decreaseQty = (cartItem) => {
                     </div>
                   )}
 
-                  {/* <Link href='/Payment' className='px-4 py-3 mb-2 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 border border-transparent rounded-md hover:bg-orange-700 cursor-pointer'>
-                  Proceed to Payment
-                  </Link> */}
-
-                  {/* <button
-                    onClick={() => {
-                      const handleButtonClick = () => {
-                        checkoutHandler();
-                        createCheckoutSession();
-                      };
-                  
-                      handleButtonClick();
-                    }}
-                    id="process-payment-btn"
-                    className='px-4 py-3 inline-block text-lg w-full text-center font-medium text-white bg-orange-600 shadow-sm border border-orange-600 rounded-md'
-                  >
-                    Checkout
-                  </button> */}
-
                   <button
                     onClick={handleCheckout}
                     id="process-payment-btn"
@@ -303,10 +270,6 @@ const decreaseQty = (cartItem) => {
                     Checkout
                   </button>
         
-                  {/* <div className='py-3'>
-                    <PaymentForm />
-                  </div> */}
-
                   <Link
                     href="/Menu"
                     className="px-4 py-3 mt-3 inline-block text-lg w-full text-center font-medium text-orange-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100"

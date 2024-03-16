@@ -30,12 +30,10 @@ export const CartProvider = ({ children }) => {
     let newCartItems;
   
     if (isItemExist) {
-      // If the item already exists, update its quantity
       newCartItems = cart?.cartItems?.map((i) =>
       i.name === item.name && i.size === item.size ? { ...i, quantity: i.quantity + 1 } : i
       );
     } else {
-      // If the item does not exist, add it to the cart with the specified quantity
       newCartItems = [...(cart?.cartItems || []), item];
     }
   

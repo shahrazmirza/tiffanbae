@@ -96,7 +96,8 @@ const SignInForm = (props: Props) => {
         className="flex justify-center"
         >Forgot Your Password?
       </Link>
-      {/* <NextAuthProviders /> */}
+      
+      <NextAuthProviders />
       
     </form>
   );
