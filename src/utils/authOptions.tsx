@@ -1,10 +1,12 @@
 import Google from "next-auth/providers/google"
-import { NextAuth, AuthOptions } from "next-auth/next";
+import { AuthOptions } from "next-auth";
+import NextAuth from "next-auth/next";
 import prisma from "../lib/prisma";
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { User } from "@prisma/client";
 
 export const authOptions: AuthOptions = {
   pages: {
