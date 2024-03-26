@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { FaFacebook } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
 
 const NextAuthProviders = () => {
   const googleSignIn = async () => {
@@ -12,20 +13,15 @@ const NextAuthProviders = () => {
   };
   return (
     <div className="">
-      {/* <Button 
+      <Button 
         onClick={googleSignIn}
         className='flex items-center justify-center my-5 w-80 md:w-96 text-medium font-medium leading-none border-neutral-400 border-solid border rounded-full text-gray-700 hover:bg-gray-200 h-12 bg-white'
       >
         <div className='flex items-center'>
-          <Image
-            src='/assets/google.png'
-            width={20}
-            height={20}
-            className='pr-0'
-          />
+          <div className='text-2xl'><FcGoogle /></div>
           <div className='pl-5'>Continue with Google</div>
-        </div>
-      </Button> */}
+      </div>
+      </Button>
 
       {/* <Button 
         onClick={googleSignIn}
