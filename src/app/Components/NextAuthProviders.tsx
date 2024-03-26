@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 const NextAuthProviders = () => {
   const googleSignIn = async () => {
     const result = await signIn("google", {
-      callbackUrl: "http://www.tiffanbae.com.au/Menu",
+      callbackUrl: "http://www.tiffanbae.com.au/api/auth/callback/google",
     });
     console.log({ result });
   };
