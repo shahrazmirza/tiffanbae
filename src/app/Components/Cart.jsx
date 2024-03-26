@@ -143,7 +143,7 @@ const Cart = () => {
                               onClick={() => decreaseQty(cartItem)}
                             >
                               <span className="m-auto text-2xl font-thin">
-                                â
+                                −
                               </span>
                             </button>
                             <input
