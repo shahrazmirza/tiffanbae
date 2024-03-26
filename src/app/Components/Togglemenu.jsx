@@ -50,7 +50,7 @@ function Togglemenu() {
     >
       <div className='flex justify-between items-center px-5 py-3 h-16'>
         <div>
-          <Link href='/' className='font-heading2 text-2xl font-bold tracking-wider text-white'>
+          <Link href='/' className='font-heading2 text-xl font-bold tracking-wider text-white'>
             TIFFAN BAE
           </Link>
         </div>
