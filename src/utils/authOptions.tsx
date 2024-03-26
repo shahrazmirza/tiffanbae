@@ -1,12 +1,12 @@
-import Google from "next-auth/providers/google"
-import { AuthOptions } from "next-auth";
-import NextAuth from "next-auth/next";
 import prisma from "../lib/prisma";
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client"
-import GoogleProvider from "next-auth/providers/google";
+import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
+import * as bcrypt from "bcrypt";
+import NextAuth from "next-auth/next";
+import { use } from "react";
 import { User } from "@prisma/client";
+import { PrismaAdapter } from "@auth/prisma-adapter"
 
 export const authOptions: AuthOptions = {
   pages: {
@@ -18,7 +18,6 @@ export const authOptions: AuthOptions = {
   jwt: {
     secret: process.env.NEXTAUTH_SECRET,
   },
-  adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID ?? "",
