@@ -301,10 +301,6 @@ const Cart = () => {
                     Checkout
                   </button>
         
-                  {/* <div className='py-3'>
-                    <PaymentForm />
-                  </div> */}
-
                   <Link
                     href="/Menu"
                     className="px-4 py-3 mt-3 inline-block text-lg w-full text-center font-medium text-orange-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100"
