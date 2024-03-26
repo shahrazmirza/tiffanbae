@@ -7,7 +7,6 @@ import { BsTrash3 } from 'react-icons/bs';
 import { RadioGroup, Radio, Input, Textarea } from "@nextui-org/react";
 import Select from 'react-select';
 import data from '../Data/DeliveryLocations.json';
-import PaymentForm from '../Components/PaymentForm';
 import { toast } from 'react-toastify';
 import axios from "axios";
 
