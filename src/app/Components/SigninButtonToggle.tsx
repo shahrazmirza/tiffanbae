@@ -47,7 +47,7 @@ const SigninButtonToggle = () => {
       }}
     >
       <DropdownTrigger>
-        <MyButton disableRipple className="text-xs">G'Day<p className="font-medium text-xs -mr-2 text-orange-400">{`${session.user.firstName}`}!</p>
+        <MyButton disableRipple className="text-xs ml-1">G'Day<p className="font-medium text-xs -mr-2 text-orange-400">{`${session.user.firstName}`}!</p>
         <CaretDownIcon />
         </MyButton>
       </DropdownTrigger>
