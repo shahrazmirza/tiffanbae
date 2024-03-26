@@ -13,7 +13,7 @@ const NextAuthProviders = () => {
   };
   return (
     <div className="">
-      <Button 
+      {/* <Button 
         onClick={googleSignIn}
         className='flex items-center justify-center my-5 w-80 md:w-96 text-medium font-medium leading-none border-neutral-400 border-solid border rounded-full text-gray-700 hover:bg-gray-200 h-12 bg-white'
       >
@@ -21,7 +21,7 @@ const NextAuthProviders = () => {
           <div className='text-2xl'><FcGoogle /></div>
           <div className='pl-5'>Continue with Google</div>
       </div>
-      </Button>
+      </Button> */}
 
       {/* <Button 
         onClick={googleSignIn}
