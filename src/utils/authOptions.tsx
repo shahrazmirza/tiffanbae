@@ -98,15 +98,14 @@ export const authOptions: AuthOptions = {
             email: user.email,
             password: 'defaultPassword', // Provide a default password value or retrieve it from the profile if available
             phone: 'defaultPhone', // Provide a default phone value or retrieve it from the profile if available
-            firstName: profile.given_name as string,
-            lastName: profile.family_name as string,
+            firstName: profile?.given_name as string, // Add the '?' operator to handle possible undefined profile
+            lastName: profile?.family_name as string, // Add the '?' operator to handle possible undefined profile
             // Add other fields as needed
           }
         });
       }
       return true;
     },
-    
   },
 };
 
