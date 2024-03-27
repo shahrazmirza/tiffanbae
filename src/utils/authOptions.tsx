@@ -88,23 +88,20 @@ export const authOptions: AuthOptions = {
 
     async signIn({ user, account, profile }) {
 
+      // ...
+  
+  
       // Save user data to the database
   
-      if (account && account.provider === 'google') {
+      if (account && account.provider === "google") {
   
-        if (!user.email) {
-  
-          throw new Error("User email is missing.");
-  
-        }
+        // ...
   
   
-        let givenName: string | undefined;
+        let givenName: string | undefined = undefined;
   
-        let familyName: string | undefined;
+        let familyName: string | undefined = undefined;
   
-  
-        // Check if 'user' has the 'given_name' and 'family_name' properties
   
         if ("given_name" in user && "family_name" in user) {
   
@@ -117,54 +114,18 @@ export const authOptions: AuthOptions = {
   
           await prisma.user.upsert({
   
-            where: { email: user.email },
-  
-            update: {},
-  
-            create: {
-  
-              email: user.email,
-  
-              password: 'defaultPassword',
-  
-              phone: 'defaultPhone',
-  
-              firstName: givenName,
-  
-              lastName: familyName,
-  
-            }
+            // ...
   
           });
   
         } else {
   
-          // It is of type 'AdapterUser'
-  
-          const { given_name, family_name, ...userWithoutNames } = user as AdapterUser;
-  
-  
-          await prisma.user.upsert({
-  
-            where: { email: (user as AdapterUser).email },
-  
-            update: {},
-  
-            create: {
-  
-              ...userWithoutNames,
-  
-              password: 'defaultPassword',
-  
-              phone: 'defaultPhone',
-  
-            }
-  
-          });
+          // ...
   
         }
   
       }
+  
   
       return true;
   
