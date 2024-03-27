@@ -7,6 +7,7 @@ import NextAuth from "next-auth/next";
 import { use } from "react";
 import { User } from "@prisma/client";
 import { PrismaAdapter } from "@auth/prisma-adapter"
+import { AdapterUser } from "next-auth/adapters";
 
 export const authOptions: AuthOptions = {
   pages: {
@@ -86,26 +87,82 @@ export const authOptions: AuthOptions = {
     },
 
     async signIn({ user, account, profile }) {
+
       // Save user data to the database
+  
       if (account && account.provider === 'google') {
+  
         if (!user.email) {
+  
           throw new Error("User email is missing.");
+  
         }
-        const firstName = user.given_name ? user.given_name : 'DefaultFirstName';
-        const lastName = user.family_name ? user.family_name : 'DefaultLastName';
-        await prisma.user.upsert({
-          where: { email: user.email },
-          update: {},
-          create: {
-            email: user.email,
-            password: 'defaultPassword',
-            phone: 'defaultPhone',
-            firstName: firstName,
-            lastName: lastName,
-          }
-        });
+  
+  
+        // Check if 'user' has the 'given_name' property
+  
+        if ("given_name" in user) {
+  
+          // It is of type 'User'
+  
+          const givenName = user.given_name;
+  
+          const familyName = user.family_name;
+  
+  
+          await prisma.user.upsert({
+  
+            where: { email: user.email },
+  
+            update: {},
+  
+            create: {
+  
+              email: user.email,
+  
+              password: 'defaultPassword',
+  
+              phone: 'defaultPhone',
+  
+              firstName: givenName,
+  
+              lastName: familyName,
+  
+            }
+  
+          });
+  
+        } else {
+  
+          // It is of type 'AdapterUser'
+  
+          const { given_name, family_name, ...userWithoutNames } = user as AdapterUser;
+  
+  
+          await prisma.user.upsert({
+  
+            where: { email: (user as AdapterUser).email },
+  
+            update: {},
+  
+            create: {
+  
+              ...userWithoutNames,
+  
+              password: 'defaultPassword',
+  
+              phone: 'defaultPhone',
+  
+            }
+  
+          });
+  
+        }
+  
       }
+  
       return true;
+  
     },
     
     
