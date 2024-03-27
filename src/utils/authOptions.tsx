@@ -7,7 +7,6 @@ import NextAuth from "next-auth/next";
 import { use } from "react";
 import { User } from "@prisma/client";
 import { PrismaAdapter } from "@auth/prisma-adapter"
-import { AdapterUser } from "next-auth/adapters";
 
 export const authOptions: AuthOptions = {
   pages: {
@@ -26,7 +25,8 @@ export const authOptions: AuthOptions = {
       profile(profile) {
         return {
           id: profile.sub,
-          name: `${profile.given_name} ${profile.family_name}`,
+          firstName: profile.given_name,
+          lastName: profile.family_name,
           email: profile.email,
           image: profile.picture,
           role: profile.role ? profile.role : "user",
@@ -76,6 +76,23 @@ export const authOptions: AuthOptions = {
   ],
 
   callbacks: {
+    async signIn(user, account, profile) {
+      // If user doesn't exist, create a new one
+      if (user) {
+        await prisma.user.upsert({
+          where: { email: user.email },
+          update: {},
+          create: {
+            email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            // Other fields you want to save...
+          },
+        });
+      }
+      return true;
+    },
+    
     async jwt({ token, user }) {
       if (user) token.user = user as User;
       return token;
@@ -85,53 +102,6 @@ export const authOptions: AuthOptions = {
       session.user = token.user;
       return session;
     },
-
-    async signIn({ user, account, profile }) {
-
-      // ...
-  
-  
-      // Save user data to the database
-  
-      if (account && account.provider === "google") {
-  
-        // ...
-  
-  
-        let givenName: string | undefined = undefined;
-  
-        let familyName: string | undefined = undefined;
-  
-  
-        if ("given_name" in user && "family_name" in user) {
-  
-          // It is of type 'User'
-  
-          givenName = user.given_name;
-  
-          familyName = user.family_name;
-  
-  
-          await prisma.user.upsert({
-  
-            // ...
-  
-          });
-  
-        } else {
-  
-          // ...
-  
-        }
-  
-      }
-  
-  
-      return true;
-  
-    },
-    
-    
   },
 };
 
