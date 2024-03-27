@@ -52,12 +52,18 @@ export const CartProvider = ({ children }) => {
     setCartToState();
   };
 
+  const updateCart = (newCartItems) => {
+    localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
+    setCart(newCartItems);
+  };
+
   return (
     <CartContext.Provider
       value={{
         cart,
         addItemToCart,
         deleteItemFromCart,
+        updateCart, // Adding updateCart function to the context
       }}
     >
       {children}
