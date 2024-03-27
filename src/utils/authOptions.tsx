@@ -77,19 +77,23 @@ export const authOptions: AuthOptions = {
 
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      // If user doesn't exist, create a new one
-      if (user) {
-        await prisma.user.upsert({
-          where: { email: user.email },
-          update: {},
-          create: {
-            email: user.email,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            // Other fields you want to save...
-          },
-        });
+      // If user doesn't exist or email is not provided, return false
+      if (!user || !user.email) {
+        return false;
       }
+  
+      // If user doesn't exist in the database, create a new one
+      await prisma.user.upsert({
+        where: { email: user.email },
+        update: {},
+        create: {
+          email: user.email,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          // Other fields you want to save...
+        },
+      });
+  
       return true;
     },
 
