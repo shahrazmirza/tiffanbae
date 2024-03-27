@@ -95,11 +95,11 @@ export const authOptions: AuthOptions = {
           where: { email: user.email },
           update: {},
           create: {
-            email: user.email,
+            email: profile.email,
             password: 'defaultPassword', // Provide a default password value or retrieve it from the profile if available
             phone: 'defaultPhone', // Provide a default phone value or retrieve it from the profile if available
-            firstName: 'DefaultFirstName', // Use a default value if profile or given_name is undefined
-            lastName: 'DefaultLastName', // Use a default value if profile or family_name is undefined
+            firstName: profile.given_name, // Use a default value if profile or given_name is undefined
+            lastName: profile.family_name, // Use a default value if profile or family_name is undefined
             // Add other fields as needed
           }
         });
