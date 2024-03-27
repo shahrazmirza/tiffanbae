@@ -88,6 +88,9 @@ export const authOptions: AuthOptions = {
     async signIn({ user, account, profile }) {
       // Save user data to the database
       if (account && account.provider === 'google') {
+        if (!user.email) {
+          throw new Error("User email is missing.");
+        }
         await prisma.user.upsert({
           where: { email: user.email },
           update: {},
@@ -101,6 +104,7 @@ export const authOptions: AuthOptions = {
       }
       return true;
     },
+    
   },
 };
 
