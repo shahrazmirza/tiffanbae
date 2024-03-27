@@ -99,15 +99,20 @@ export const authOptions: AuthOptions = {
         }
   
   
-        // Check if 'user' has the 'given_name' property
+        let givenName: string | undefined;
   
-        if ("given_name" in user) {
+        let familyName: string | undefined;
+  
+  
+        // Check if 'user' has the 'given_name' and 'family_name' properties
+  
+        if ("given_name" in user && "family_name" in user) {
   
           // It is of type 'User'
   
-          const givenName = user.given_name;
+          givenName = user.given_name;
   
-          const familyName = user.family_name;
+          familyName = user.family_name;
   
   
           await prisma.user.upsert({
