@@ -96,15 +96,14 @@ export const authOptions: AuthOptions = {
           update: {},
           create: {
             email: user.email,
-            firstName: profile.given_name,
-            lastName: profile.family_name,
+            firstName: profile.given_name as string,
+            lastName: profile.family_name as string,
             // Add other fields as needed
           }
         });
       }
       return true;
     },
-    
   },
 };
 
