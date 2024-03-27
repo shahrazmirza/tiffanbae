@@ -87,7 +87,7 @@ export const authOptions: AuthOptions = {
 
     async signIn({ user, account, profile }) {
       // Save user data to the database
-      if (account.provider === 'google') {
+      if (account && account.provider === 'google') {
         await prisma.user.upsert({
           where: { email: user.email },
           update: {},
