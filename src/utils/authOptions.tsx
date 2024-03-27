@@ -25,14 +25,14 @@ export const authOptions: AuthOptions = {
       profile(profile) {
         return {
           id: profile.sub,
-          firstName: profile.given_name,
-          lastName: profile.family_name,
+          name: `${profile.given_name} ${profile.family_name}`,
           email: profile.email,
           image: profile.picture,
           role: profile.role ? profile.role : "user",
         };
       },
       idToken: true,
+
       authorization: {
         params: {
           scope: "openid profile email",
@@ -76,29 +76,26 @@ export const authOptions: AuthOptions = {
   ],
 
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
-      // If user doesn't exist or email is not provided, return false
-      if (!user || !user.email) {
-        return false;
-      }
-  
-      // If user doesn't exist in the database, create a new one
-      await prisma.user.upsert({
-        where: { email: user.email },
-        update: {},
-        create: {
-          email: user.email,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          // Other fields you want to save...
-        },
-      });
-  
-      return true;
-    },
-
     async jwt({ token, user }) {
-      if (user) token.user = user as User;
+      if (user) {
+        // Check if user already exists
+        const existingUser = await prisma.user.findUnique({
+          where: { email: user.email },
+        });
+  
+        // Create user if it doesn't exist
+        if (!existingUser) {
+          await prisma.user.create({
+            data: {
+              email: user.email,
+              firstName: user.name.split(" ")[0], // Assuming name is formatted as "FirstName LastName"
+              lastName: user.name.split(" ")[1],
+            },
+          });
+        }
+  
+        token.user = user;
+      }
       return token;
     },
 
