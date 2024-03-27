@@ -91,21 +91,23 @@ export const authOptions: AuthOptions = {
         if (!user.email) {
           throw new Error("User email is missing.");
         }
+        const firstName = user.given_name ? user.given_name : 'DefaultFirstName';
+        const lastName = user.family_name ? user.family_name : 'DefaultLastName';
         await prisma.user.upsert({
           where: { email: user.email },
           update: {},
           create: {
             email: user.email,
-            password: 'defaultPassword', // Provide a default password value or retrieve it from the profile if available
-            phone: 'defaultPhone', // Provide a default phone value or retrieve it from the profile if available
-            firstName: user.given_name, // Use a default value if profile or given_name is undefined
-            lastName: user.family_name, // Use a default value if profile or family_name is undefined
-            // Add other fields as needed
+            password: 'defaultPassword',
+            phone: 'defaultPhone',
+            firstName: firstName,
+            lastName: lastName,
           }
         });
       }
       return true;
     },
+    
     
   },
 };
