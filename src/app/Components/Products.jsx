@@ -36,13 +36,13 @@ const Products = ({ }) => {
   return (
     <Container>
       <div className='grid'>
-        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 py-20 text-center'>
+        <p className='font-heading2 uppercase font-bold text-3xl md:text-4xl text-neutral-700 border-zinc-300 pt-20 py-16 text-center'>
           MUTTON CORNER
         </p>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-14'>
+        <ul className='grid grid-cols-1 md:grid-cols-2 md:gap-14 gap-5 p-5'>
         {items.filter(item => item.category === 'mutton').map((item) => (
             <li>
-              <div className='border p-5'>
+              <div className='border rounded p-5 shadow-md'>
                 <div className='flex justify-between'>
                   <p className='font-medium text-base md:text-lg font-heading2 uppercase text-neutral-600'>
                     {item.name}

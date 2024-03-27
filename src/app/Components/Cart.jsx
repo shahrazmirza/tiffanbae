@@ -80,7 +80,7 @@ const Cart = () => {
     ) {
       return toast.error("Please enter your delivery address");
     } else {
-      // Continue with the checkout process
+      
       try {
         const response = await axios.post(
           'api/checkout_sessions',
@@ -94,41 +94,31 @@ const Cart = () => {
     }
   };
 
-//   const createCheckoutSession = async () => {
-
-//     axios.post('api/checkout_sessions', { cartItem })
-//         .then(res => {
-//             console.log(res)
-//             window.location = res.data.sessionURL
-//         })
-//         .catch(err => console.log(err))
-// }
-
   return (
     <div>
       <section className="py-5 sm:py-7 bg-gray-200">
-        <div className="container max-w-screen-xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold mb-2">
+        <div className="container max-w-screen-xl mx-auto px-5">
+          <h2 className="text-3xl font-semibold">
             {cart?.cartItems?.length || 0} Item(s) in Cart
           </h2>
         </div>
       </section>
     <Section>
       {cart?.cartItems?.length > 0 && (
-        <section className="py-10">
-          <div className="container max-w-screen-xl mx-auto px-4">
+        <section>
+          <div className="container max-w-screen-xl mx-auto px-5">
             <div className="flex flex-col md:flex-row gap-10">
               <main className="md:w-4/6">
-                <article className="border border-gray-200 bg-white shadow-sm rounded mb-5 p-3 lg:p-5">
+                <article className="border border-gray-200 bg-white shadow-sm rounded p-5">
                   {cart?.cartItems?.map((cartItem) => (
                     <div>
-                      <div className="flex flex-wrap lg:flex-row gap-5 mb-4 place-items-center">
+                      <div className="flex flex-wrap lg:flex-row gap-5 place-items-center">
                         <div className="w-full lg:w-2/5 xl:w-2/4">
                           <div className="flex leading-5">
                             {/* <figure className="block w-16 h-16 rounded border border-gray-200 overflow-hidden">
                               <img src={cartItem.image} alt={cartItem.name} />
                             </figure> */}
-                            <div className="ml-3 capitalize">
+                            <div className="capitalize">
                               <p>{cartItem.name}</p>
                             </div>
                           </div>
@@ -189,7 +179,7 @@ const Cart = () => {
                 </article>
               </main>
               <aside className="md:w-2/6">
-                <article className="border border-gray-200 bg-white shadow-sm rounded mb-5 p-3 lg:p-5">
+                <article className="border border-gray-200 bg-white shadow-sm rounded mb-5 p-5">
                   <ul className="mb-5">
                     <li className="flex justify-between text-gray-600  mb-1">
                       <span>Total Units:</span>
