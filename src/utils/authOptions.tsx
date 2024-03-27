@@ -76,7 +76,7 @@ export const authOptions: AuthOptions = {
   ],
 
   callbacks: {
-    async signIn(user, account, profile) {
+    async signIn({ user, account, profile, email, credentials }) {
       // If user doesn't exist, create a new one
       if (user) {
         await prisma.user.upsert({
@@ -92,7 +92,7 @@ export const authOptions: AuthOptions = {
       }
       return true;
     },
-    
+
     async jwt({ token, user }) {
       if (user) token.user = user as User;
       return token;
