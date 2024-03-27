@@ -80,7 +80,7 @@ export const authOptions: AuthOptions = {
       if (user) {
         // Check if user already exists
         const existingUser = await prisma.user.findUnique({
-          where: { email: user.email },
+          where: { email: user?.email }, // Use optional chaining to handle null
         });
   
         // Create user if it doesn't exist
