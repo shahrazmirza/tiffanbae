@@ -13,8 +13,8 @@ const SuccessPage = () => {
 
   React.useEffect(() => {
     clearCart();
-  }, []); // Empty dependency array ensures the effect runs only once after component mounts
-
+  }, []);
+  
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white p-10 shadow-md flex flex-col items-center">
