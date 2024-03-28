@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY_TEST);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -34,12 +34,20 @@ export default async function handler(req, res) {
     }
 
     try {
-      const session = await stripe.checkout.sessions.create({
+      const sessionOptions = {
         line_items: line_items,
         mode: 'payment',
         success_url: `${req.headers.origin}/Success`,
         cancel_url: `${req.headers.origin}/Cancel`,
-      });
+      };
+
+      if (selectedMethod === "delivery") {
+        sessionOptions.shipping_address_collection = {
+          allowed_countries: ['AU'], 
+        };
+      }
+
+      const session = await stripe.checkout.sessions.create(sessionOptions);
       res.json({"sessionURL": session.url});
     } catch (err) {
       console.log(err);

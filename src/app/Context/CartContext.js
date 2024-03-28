@@ -63,7 +63,7 @@ export const CartProvider = ({ children }) => {
         cart,
         addItemToCart,
         deleteItemFromCart,
-        updateCart, // Adding updateCart function to the context
+        updateCart, 
       }}
     >
       {children}
