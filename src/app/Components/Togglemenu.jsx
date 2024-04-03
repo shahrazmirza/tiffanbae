@@ -68,7 +68,7 @@ function Togglemenu() {
       <div>
         <NavigationMenu.Root>
           <NavigationMenu.List className=" list-none">
-            <div className='z-20 flex flex-col justify-center items-center -py-16 gap-y-20 h-screen w-screen bg-black text-white'>
+            <div className='z-20 flex flex-col justify-center items-center -py-16 gap-y-20 h-screen w-screen pb-40 bg-black text-white'>
               <NavigationMenu.Item>
                 <NavigationMenu.Link
                   className="text-xl font-medium hover:text-gray-500" 
