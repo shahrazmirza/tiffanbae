@@ -1,19 +1,19 @@
-'use client'
-import { Button } from '@radix-ui/themes';
-import Link from 'next/link';
-import React, { useContext } from 'react';
-import CartContext from '../Context/CartContext';
+"use client";
+import { Button } from "@radix-ui/themes";
+import Link from "next/link";
+import React, { useContext } from "react";
+import CartContext from "../Context/CartContext";
 
 const SuccessPage = () => {
   const { updateCart } = useContext(CartContext);
 
   const clearCart = () => {
-    updateCart([]); 
+    updateCart([]);
   };
 
   React.useEffect(() => {
     clearCart();
-  }, []); 
+  }, []);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">

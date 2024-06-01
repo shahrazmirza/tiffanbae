@@ -1,9 +1,9 @@
-'use client'
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa6";
-import Link from 'next/link';
-import { Button, Input } from '@nextui-org/react';
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/20/solid';
+import Link from "next/link";
+import { Button, Input } from "@nextui-org/react";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
 import { z } from "zod";
 import validator from "validator";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
@@ -11,7 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { registerUser } from "../../lib/actions/authActions";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import NextAuthProviders from './NextAuthProviders';
+import NextAuthProviders from "./NextAuthProviders";
 import { signIn } from "next-auth/react";
 
 interface Props {
@@ -57,48 +57,51 @@ const SignInForm = (props: Props) => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col justify-center items-center text-center pt-10 bg-black"
     >
-      <p className='text-4xl font-medium mb-5 text-white'>G'day</p>
-      <div className='flex'>
-        <p className='text-white'>Sign in to Tiffan Bae or </p>
-        <Link href='/auth/signup' className='ml-1 underline text-blue-600'>create an account</Link>
+      <p className="text-4xl font-medium mb-5 text-white">G'day</p>
+      <div className="flex">
+        <p className="text-white">Sign in to Tiffan Bae or </p>
+        <Link href="/auth/signup" className="ml-1 underline text-blue-600">
+          create an account
+        </Link>
       </div>
-      
-      <Input 
-        label="Email" 
-        {...register("email")} 
+
+      <Input
+        label="Email"
+        {...register("email")}
         errorMessage={errors.email?.message}
-        className="w-80 md:w-96 rounded border-neutral-400 my-5" 
+        className="w-80 md:w-96 rounded border-neutral-400 my-5"
       />
       <Input
         label="Password"
         {...register("password")}
         type={visiblePass ? "text" : "password"}
         errorMessage={errors.password?.message}
-        className='w-80 md:w-96 rounded border-neutral-400 text-black'
+        className="w-80 md:w-96 rounded border-neutral-400 text-black"
         endContent={
           <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
-            {visiblePass ? <EyeSlashIcon className="w-4" /> : <EyeIcon className="w-4" />}
+            {visiblePass ? (
+              <EyeSlashIcon className="w-4" />
+            ) : (
+              <EyeIcon className="w-4" />
+            )}
           </button>
         }
       />
-        <div className="flex items-center justify-center gap-2">
-          <Button 
-            type="submit" 
-            disabled={isSubmitting} 
-            isLoading={isSubmitting}
-            className='flex items-center justify-center px-10 my-5 w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700'
-          >
-            {isSubmitting ? "Signing In..." : "Sign In"}
-          </Button>
-        </div>
-      <Link 
-        href={"/auth/forgotPassword"}
-        className="flex justify-center"
-        >Forgot Your Password?
+      <div className="flex items-center justify-center gap-2">
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          isLoading={isSubmitting}
+          className="flex items-center justify-center px-10 my-5 w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
+        >
+          {isSubmitting ? "Signing In..." : "Sign In"}
+        </Button>
+      </div>
+      <Link href={"/auth/forgotPassword"} className="flex justify-center">
+        Forgot Your Password?
       </Link>
-      
+
       <NextAuthProviders />
-      
     </form>
   );
 };

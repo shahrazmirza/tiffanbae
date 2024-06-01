@@ -1,4 +1,4 @@
-import {nextui} from "@nextui-org/react";
+import { nextui } from "@nextui-org/react";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,11 +16,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        heading1: ['Herr Von Muellerhoff', 'cursive'],
-        heading2: ['Source Sans', 'sans-serif'],
+        heading1: ["Herr Von Muellerhoff", "cursive"],
+        heading2: ["Source Sans", "sans-serif"],
       },
     },
   },
   darkMode: "class",
-  plugins: [nextui()]
+  plugins: [nextui()],
 };

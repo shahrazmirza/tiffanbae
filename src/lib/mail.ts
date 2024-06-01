@@ -20,7 +20,7 @@ export async function sendMail({
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
-    }
+    },
   });
 
   try {

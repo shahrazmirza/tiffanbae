@@ -1,10 +1,10 @@
 import SignInForm from "../../Components/SignInForm";
 import Link from "next/link";
-import Navbar from '../../Components/Navbar'
-import { Container } from '@radix-ui/themes'
+import Navbar from "../../Components/Navbar";
+import { Container } from "@radix-ui/themes";
 import { FaFacebook } from "react-icons/fa6";
-import Image from 'next/image';
-import Whatsapp from '../../Components/Whatsapp';
+import Image from "next/image";
+import Whatsapp from "../../Components/Whatsapp";
 
 interface Props {
   searchParams: {

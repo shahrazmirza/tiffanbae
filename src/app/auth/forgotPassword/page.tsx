@@ -41,10 +41,10 @@ const ForgotPasswordPage = () => {
       <Navbar />
       <Whatsapp />
       <div className="bg-black text-white flex flex-col justify-center items-center text-center h-screen">
-        <form
-          onSubmit={handleSubmit(submitRequest)}
-        >
-          <div className="text-xl font-medium text-white mb-5">Enter Your Email</div>
+        <form onSubmit={handleSubmit(submitRequest)}>
+          <div className="text-xl font-medium text-white mb-5">
+            Enter Your Email
+          </div>
           <Input
             label="Email"
             {...register("email")}

@@ -1,21 +1,29 @@
-import formData from 'form-data';
-import Mailgun from 'mailgun.js';
-  
-  export default async function handler(req, res) {
-  console.log('Data', req.body)
+import formData from "form-data";
+import Mailgun from "mailgun.js";
 
-  const { firstName, lastName, email, phoneNumber, selectedMethod, allowedSuburbs, deliveryAddress } = req.body
+export default async function handler(req, res) {
+  console.log("Data", req.body);
 
-  const API_KEY = process.env.MAILGUN_API_KEY || ''
-  const DOMAIN = process.env.MAILGUN_DOMAIN || ''
+  const {
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    selectedMethod,
+    allowedSuburbs,
+    deliveryAddress,
+  } = req.body;
+
+  const API_KEY = process.env.MAILGUN_API_KEY || "";
+  const DOMAIN = process.env.MAILGUN_DOMAIN || "";
 
   const mailgun = new Mailgun(formData);
-  const client = mailgun.client({username: 'api', key: API_KEY});
+  const client = mailgun.client({ username: "api", key: API_KEY });
 
   const messageData = {
-    from: 'New Order <info@tiffanbae.com.au>',
-    to: 'info@tiffanbae.com.au',
-    subject: 'New Order!',
+    from: "New Order <info@tiffanbae.com.au>",
+    to: "info@tiffanbae.com.au",
+    subject: "New Order!",
     text: `
       Name: ${firstName} ${lastName} 
       Email: ${email}
@@ -27,18 +35,18 @@ import Mailgun from 'mailgun.js';
   };
 
   try {
-    const emailRes = await client.messages.create(DOMAIN, messageData)
-    console.log(emailRes)
+    const emailRes = await client.messages.create(DOMAIN, messageData);
+    console.log(emailRes);
   } catch (err) {
-    console.error('Error sending email', err);
+    console.error("Error sending email", err);
   }
-  
-  res.status(200).json({ submitted: true })
+
+  res.status(200).json({ submitted: true });
 }
 
 // import formData from 'form-data';
 // import Mailgun from 'mailgun.js';
-  
+
 //   export default async function handler(req, res) {
 //   console.log('Data', req.body)
 
@@ -55,7 +63,7 @@ import Mailgun from 'mailgun.js';
 //     to: 'info@tiffanbae.com.au',
 //     subject: 'New Order!',
 //     text: `
-//       Name: ${firstName} ${lastName} 
+//       Name: ${firstName} ${lastName}
 //       Email: ${email}
 //       Phone: ${phoneNumber}
 //       Method: ${selectedMethod}
@@ -70,6 +78,6 @@ import Mailgun from 'mailgun.js';
 //   } catch (err) {
 //     console.error('Error sending email', err);
 //   }
-  
+
 //   res.status(200).json({ submitted: true })
 // }

@@ -21,9 +21,7 @@ const FormSchema = z
       .min(2, "Last name must be atleast 2 characters")
       .max(45, "Last name must be less than 45 characters")
       .regex(new RegExp("^[a-zA-Z]+$"), "No special character allowed!"),
-    email: z
-      .string()
-      .email("Please enter a valid email address"),
+    email: z.string().email("Please enter a valid email address"),
     phone: z
       .string()
       .refine(validator.isMobilePhone, "Please enter a valid phone number!"),
@@ -54,7 +52,7 @@ const SignUpForm = () => {
   } = useForm<InputType>({
     resolver: zodResolver(FormSchema),
   });
-  
+
   const [isVisiblePass, setIsVisiblePass] = useState(false);
 
   const toggleVisiblePass = () => setIsVisiblePass((prev) => !prev);
@@ -135,8 +133,11 @@ const SignUpForm = () => {
         className="w-80 md:w-96 h-12 rounded border-neutral-400"
       />
       <div className="flex justify-center">
-        <Button className="flex items-center justify-center px-10  w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700" type="submit">
-        Submit
+        <Button
+          className="flex items-center justify-center px-10  w-80 md:w-96 text-medium font-medium leading-none border-gray-700 border-solid border rounded-full text-white hover:text-gray-700 h-12 hover:bg-white bg-gray-700"
+          type="submit"
+        >
+          Submit
         </Button>
       </div>
     </form>

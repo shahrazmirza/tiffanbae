@@ -58,10 +58,10 @@ const ResetPasswordForm = ({ jwtUserId }: Props) => {
   };
   return (
     <div className="bg-black text-white flex flex-col justify-center items-center text-center h-screen">
-      <form
-        onSubmit={handleSubmit(resetPass)}
-        >
-        <div className="text-xl font-medium text-white mb-5">Reset Your Password</div>
+      <form onSubmit={handleSubmit(resetPass)}>
+        <div className="text-xl font-medium text-white mb-5">
+          Reset Your Password
+        </div>
         <Input
           type={visiblePass ? "text" : "password"}
           label="Password"
@@ -69,7 +69,10 @@ const ResetPasswordForm = ({ jwtUserId }: Props) => {
           errorMessage={errors.password?.message}
           className="w-80 md:w-96 h-12 rounded border-neutral-400 my-5"
           endContent={
-            <button type="button" onClick={() => setVisiblePass((prev) => !prev)}>
+            <button
+              type="button"
+              onClick={() => setVisiblePass((prev) => !prev)}
+            >
               {visiblePass ? (
                 <EyeSlashIcon className="w-4" />
               ) : (

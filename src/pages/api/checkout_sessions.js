@@ -1,9 +1,8 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
-
-    const { cartItem, selectedMethod } = req.body; 
+  if (req.method === "POST") {
+    const { cartItem, selectedMethod } = req.body;
 
     const items = cartItem;
 
@@ -27,7 +26,7 @@ export default async function handler(req, res) {
           product_data: {
             name: "DELIVERY FEE",
           },
-          unit_amount: 1000, 
+          unit_amount: 1000,
         },
         quantity: 1,
       });
@@ -36,25 +35,25 @@ export default async function handler(req, res) {
     try {
       const sessionOptions = {
         line_items: line_items,
-        mode: 'payment',
+        mode: "payment",
         success_url: `${req.headers.origin}/Success`,
         cancel_url: `${req.headers.origin}/Cancel`,
       };
 
       if (selectedMethod === "delivery") {
         sessionOptions.shipping_address_collection = {
-          allowed_countries: ['AU'], 
+          allowed_countries: ["AU"],
         };
       }
 
       const session = await stripe.checkout.sessions.create(sessionOptions);
-      res.json({"sessionURL": session.url});
+      res.json({ sessionURL: session.url });
     } catch (err) {
       console.log(err);
       res.status(err.statusCode || 500).json(err.message);
     }
   } else {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
+    res.setHeader("Allow", "POST");
+    res.status(405).end("Method Not Allowed");
   }
 }

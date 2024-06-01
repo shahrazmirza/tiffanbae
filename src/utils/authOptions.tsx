@@ -6,7 +6,7 @@ import * as bcrypt from "bcrypt";
 import NextAuth from "next-auth/next";
 import { use } from "react";
 import { User } from "@prisma/client";
-import { PrismaAdapter } from "@auth/prisma-adapter"
+import { PrismaAdapter } from "@auth/prisma-adapter";
 
 export const authOptions: AuthOptions = {
   pages: {
@@ -62,12 +62,18 @@ export const authOptions: AuthOptions = {
 
         if (!user) throw new Error("User name or password is not correct");
 
-        if (!credentials?.password) throw new Error("Please Provide Your Password");
-        const isPassowrdCorrect = await bcrypt.compare(credentials.password, user.password);
+        if (!credentials?.password)
+          throw new Error("Please Provide Your Password");
+        const isPassowrdCorrect = await bcrypt.compare(
+          credentials.password,
+          user.password
+        );
 
-        if (!isPassowrdCorrect) throw new Error("User name or password is not correct");
+        if (!isPassowrdCorrect)
+          throw new Error("User name or password is not correct");
 
-        if (!user.emailVerified) throw new Error("Please verify your email first!");
+        if (!user.emailVerified)
+          throw new Error("Please verify your email first!");
 
         const { password, ...userWithoutPass } = user;
         return userWithoutPass;

@@ -1,10 +1,10 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@import '@fontsource/cabin';
-@import '@fontsource/herr-von-muellerhoff';
-@import '@fontsource/source-sans-3';
+@import "@fontsource/cabin";
+@import "@fontsource/herr-von-muellerhoff";
+@import "@fontsource/source-sans-3";
 
 @keyframes marquee {
   0% {
@@ -17,12 +17,9 @@
 }
 
 #simplify-checkout-embed-frame {
-
   border: none;
 
-  height: 375px; 
+  height: 375px;
 
   overflow: hidden;
-
 }
-

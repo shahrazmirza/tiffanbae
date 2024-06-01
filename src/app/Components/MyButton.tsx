@@ -1,5 +1,5 @@
 // MyButton.tsx
-import {extendVariants, Button} from "@nextui-org/react";
+import { extendVariants, Button } from "@nextui-org/react";
 
 export const MyButton = extendVariants(Button, {
   variants: {
@@ -18,11 +18,13 @@ export const MyButton = extendVariants(Button, {
       xl: "px-unit-8 min-w-unit-28 h-unit-14 text-large gap-unit-4 rounded-medium",
     },
   },
-  defaultVariants: { // <- modify/add default variants
+  defaultVariants: {
+    // <- modify/add default variants
     color: "white",
     size: "md",
   },
-  compoundVariants: [ // <- modify/add compound variants
+  compoundVariants: [
+    // <- modify/add compound variants
     {
       isDisabled: true,
       color: "white",

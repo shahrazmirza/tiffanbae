@@ -11,7 +11,6 @@ import {
 import { signJwt, verifyJwt } from "../jwt";
 import prisma from "../prisma";
 
-
 export async function registerUser(
   user: Omit<User, "id" | "emailVerified" | "image">
 ) {
@@ -35,7 +34,6 @@ export async function registerUser(
     return { success: false, error: error.message };
   }
 }
-
 
 type ActivateUserFunc = (
   jwtUserId: string
@@ -93,14 +91,14 @@ type ResetPasswordFucn = (
 export const resetPassword: ResetPasswordFucn = async (jwtUserId, password) => {
   const payload = verifyJwt(jwtUserId);
   if (!payload) return "userNotExist";
-  
+
   const userId = payload.id;
   const user = await prisma.user.findUnique({
     where: {
       id: userId,
     },
   });
-  
+
   if (!user) return "userNotExist";
 
   const result = await prisma.user.update({
